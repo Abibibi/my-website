@@ -1,0 +1,48 @@
+@media (min-width: 300px) {
+  .header {
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &-text {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      color: white;
+      font-family: 'Raleway', sans-serif;
+
+      &-name {
+        margin-top: 25%;
+        font-size: 2.6rem;
+        font-weight: 300;
+      }
+
+      &-subtitle {
+        margin-top: 0.7rem;
+        text-align: center;
+        line-height: 1.2rem;
+        width: 59.7%;
+        color: #b1aeae;
+        font-family: 'PT Sans', sans-serif;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    flex-direction: row;
+
+    &-text {
+      width: 50%;
+      height: 100%;
+    }
+
+  }
+}
+
+
+

@@ -14,14 +14,14 @@ export default [
   {
     id: 2,
     name: 'Réseau social autour des séries',
-    description: 'Serial Killer est à la fois une bibliothèque d\'information et un réseau social sur les séries, où les utilisateurs peuvent rédiger des, chatter et s\'abonner les uns aux autres.',
+    description: 'Serial Killer est à la fois une bibliothèque d\'information et un réseau social sur les séries, où les utilisateurs peuvent publier des avis, chatter et s\'abonner les uns aux autres.',
     technology: [
       'Express.js',
       'PostgreSQL',
       'Sequelize',
       'React',
     ],
-    site: 'http://serialkiller.abebangwe.com/',
+    website: 'http://serialkiller.abebangwe.com/',
     demo: 'https://www.youtube.com/watch?v=36cu4wNc2OA',
     github: 'https://github.com/Abibibi/tv-show-social-network',
   },
@@ -58,7 +58,7 @@ export default [
   },
   {
     id: 6,
-    name: 'Moteur de recherche de produits',
+    name: 'Moteur de recherche de produit',
     technology: [
       'JavaScript Vanilla',
     ],

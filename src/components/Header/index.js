@@ -10,7 +10,7 @@ const Header = () => (
       <p className="header-text-subtitle">Je suis développeuse Node.js, React et Vue.js. Pour voir mon portfolio, suivez mon regard.</p>
     </div>
     <div className="header-picture">
-      <img className="header-picture-content" src={picture} />
+      <img className="header-picture-content" src={picture} alt="portrait où Abeba Ngwe regarde vers le bas en souriant, donnant l'impression d'observer la section suivante du site qui se trouve justement plus bas." />
     </div>
   </div>
 );

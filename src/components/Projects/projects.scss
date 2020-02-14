@@ -1,0 +1,48 @@
+@media (min-width: 300px) {
+  .projects {
+    &-title {
+      margin: 1rem;
+      line-height: 1.2rem;
+    }
+
+    &-all {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-github {
+      margin: 1rem;
+      
+      &-link {
+        text-decoration: underline;
+      }
+
+      &-picture {
+        width: 1.2rem;
+        margin-left: .4rem;
+      }
+    }
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &-slider {
+      height: 50%;
+    }
+
+    &-details {
+      height: 50%;
+
+      &-links {
+        color: red;
+
+        &-link {
+          margin-right: 1rem;
+        } 
+      }
+    }
+  }
+}

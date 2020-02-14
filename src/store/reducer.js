@@ -1,6 +1,9 @@
+import projects from 'src/data/projects';
+
 // == Initial State
 const initialState = {
   message: 'Hello',
+  projects,
 };
 
 // == Types

@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 // == Import : local
-import Example from 'src/components/Example';
+import Projects from 'src/components/Projects';
 
 // Action Creators
 import { doSomething } from 'src/store/reducer';
@@ -15,7 +15,7 @@ import { doSomething } from 'src/store/reducer';
  * Pas de data à transmettre ? const mapStateToProps = null;
  */
 const mapStateToProps = (state, ownProps) => ({
-  message: state.message,
+  projects: state.projects,
 });
 
 /* === Actions ===
@@ -32,17 +32,10 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
 // Container
-const ExampleContainer = connect(
+const ProjectsContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Example);
+)(Projects);
 
 // == Export
-export default ExampleContainer;
-
-/* = export à la volée
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Example);
-*/
+export default ProjectsContainer;

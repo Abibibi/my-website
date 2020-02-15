@@ -10,22 +10,32 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 7vh;
       width: 100%;
       color: white;
 
       &-name {
-        margin: 9rem 0 .7rem;
-        font-size: 2.6rem;
+        /* margin: 9rem 0 .7rem; */
+        margin-bottom: .5rem;
+        font-size: 2.6vh;
         font-weight: 300;
         font-family: 'Raleway', sans-serif;
+        display: none;
       }
 
       &-subtitle {
         text-align: center;
-        line-height: 1.2rem;
+        font-size: 3vh;
+        line-height: 3.9vh;
         width: 59.7%;
-        color: #7d7575;
-        font-weight: 300
+        color: #a99d9d;
+        font-weight: 300;
+
+        &-profession {
+          color: #ffffff;
+          font-weight: 400;
+        }
       }
     }
 
@@ -43,26 +53,6 @@
   }
 }
 
-@media (min-width: 700px) {
-  .header {
-    &-text {
-      height: 40%;
-      
-      &-name {
-        margin: 6rem 0 .7rem;
-      }
-
-      &-subtitle {
-        width: 40%;
-      }
-    }
-
-    &-picture {
-      height: 60%;
-    }
-  }
-}
-
 @media (min-width: 900px) {
   .header {
     flex-direction: row;
@@ -70,18 +60,18 @@
     &-text {
       width: 50%;
       height: 100%;
-      align-items: center;
+      padding-bottom: 30vh;
 
       &-name {
-        margin-top: 45vh;
         font-size: 3.5rem;
         text-align: left;
       }
 
       &-subtitle {
-        font-size: 1.4rem;
+        text-align: left;
+        font-size: 2.2vw;
         width: 59.7%;
-        line-height: 1.6rem;
+        line-height: 3vw;
       }
     }
 

@@ -19,13 +19,13 @@
       width: 100%;
 
       &-link {
-
+        text-align: right;
+        
         &-onelink {
-          display: flex;
-          justify-content: flex-end;
 
           &-github {
             width: 60%;
+            object-fit: cover;
           }
   
           &-linkedin {

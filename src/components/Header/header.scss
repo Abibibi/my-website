@@ -9,13 +9,6 @@
     align-items: center;
     justify-content: flex-end;
 
-    /* &-name {
-      margin-bottom: .5rem;
-      font-weight: 300;
-      font-family: 'Raleway', sans-serif;
-      display: none;
-    } */
-
     &-subtitle {
       color: #a99d9d;
       font-weight: 300;
@@ -41,10 +34,6 @@
       height: 50%;
       padding-bottom: 7vh;
       width: 100%;
-
-      /* &-name {
-        font-size: 2.6vh;
-      } */
 
       &-subtitle {
         text-align: center;
@@ -75,10 +64,6 @@
       padding-bottom: 7vh;
       width: 100%;
 
-      /* &-name {
-        font-size: 2.6vh;
-      } */
-
       &-subtitle {
         text-align: center;
         font-size: 3vh;
@@ -107,11 +92,6 @@
       width: 50%;
       height: 100%;
       padding-bottom: 25vh;
-
-      /* &-name {
-        font-size: 3.5rem;
-        text-align: left;
-      } */
 
       &-subtitle {
         text-align: left;

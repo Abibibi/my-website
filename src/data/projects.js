@@ -13,7 +13,7 @@ export default [
   },
   {
     id: 2,
-    name: 'Réseau social autour des séries',
+    name: 'Réseau social sur les séries',
     description: 'Serial Killer est à la fois une bibliothèque d\'information et un réseau social sur les séries, où les utilisateurs peuvent publier des avis, chatter et s\'abonner les uns aux autres.',
     technology: [
       'Express.js',
@@ -45,6 +45,7 @@ export default [
     ],
     description: 'Au clic sur le bouton rejouer, une nouvelle prédiction pour 2020 apparaît. Inspiré du filtre Instagram "In 2020 I will be".',
     demo: 'https://www.linkedin.com/posts/abebangwe_javascript-ugcPost-6631169661461377024-jmVz',
+    website: 'http://test.com',
     github: 'https://github.com/Abibibi/2020-prediction-game',
   },
   {
@@ -54,6 +55,7 @@ export default [
       'JavaScript Vanilla',
     ],
     description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer de gros volumes de documents en recto-verso, notamment des Google documents.',
+    website: 'http://test.com',
     github: 'https://github.com/Abibibi/printing-assistant',
   },
   {
@@ -62,7 +64,8 @@ export default [
     technology: [
       'JavaScript Vanilla',
     ],
-    description: 'Après avoir sélectionné une catégorie de produit et renseigné un budget maximal, une liste de produits correspondant aux critères saisis apparaît.',
+    description: 'Après avoir sélectionné une catégorie de produit et renseigné un budget maximal, l\'utilisateur-rice voit apparaître une liste de produits correspondant aux critères saisis.',
+    website: 'http://test.com',
     github: 'https://github.com/Abibibi/product-finder',
   },
 ];

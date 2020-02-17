@@ -3,10 +3,8 @@ import React from 'react';
 import './projects.scss';
 
 const Project = ({
-  id,
   name,
   description,
-  technology,
   website,
   demo,
   github,
@@ -16,13 +14,12 @@ const Project = ({
       
     </div>
     <div className="project-details">
-      <h2>{name}</h2>
-      <p>{description}</p>
+      <h2 className="project-details-title">{name}</h2>
+      <p className="project-details-description">{description}</p>
       {/* using conditional rendering, otherwise
       console says technology is undefined
       when I iterate it
       */}
-      <p>Technologies utilisées : {technology && technology.map((tech) => tech).join(', ')}</p>
       <div className="project-details-links">
         {website && (
         <a

@@ -31,6 +31,7 @@ const Project = ({
           Site
         </a>
         )}
+        {demo && (
         <a
           className="project-details-links-link"
           href={demo}
@@ -39,6 +40,7 @@ const Project = ({
         >
           Démo
         </a>
+        )}
         <a
           className="project-details-links-link"
           href={github}

@@ -25,11 +25,12 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              GitHub
+              {/* <img
                 className="navbar-nav-links-link-onelink-logo"
                 src={GitHub}
                 alt="Logo Github"
-              />
+              /> */}
             </a>
           </li>
           <li className="navbar-nav-links-link">
@@ -39,11 +40,12 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              LinkedIn
+              {/* <img
                 className="navbar-nav-links-link-onelink-logo"
                 src={LinkedIn}
                 alt="Logo LinkedIn"
-              />
+              /> */}
             </a>
           </li>
           <li className="navbar-nav-links-link">
@@ -53,11 +55,12 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              Contact
+              {/* <img
                 className="navbar-nav-links-link-onelink-logo"
                 src={Contact}
                 alt="Contact"
-              />
+              /> */}
             </a>
           </li>
         </ul>

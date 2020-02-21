@@ -51,6 +51,16 @@
           word-wrap: normal;
           display: inline-block;
           margin: 0 2.5vw;
+
+          &:hover {
+            background-color: #000000;
+            color: #ffffff;
+          }
+
+          &:active {
+            position: relative;
+            top: .3vh;
+          }
         } 
       }
     }

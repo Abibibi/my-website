@@ -22,6 +22,7 @@
         text-align: right;
         
         &-onelink {
+          font-weight: 600;
 
           &-logo {
             width: 60%;
@@ -74,9 +75,10 @@
         transition: transform .7s ease-in;
 
         &-link {
-          margin-bottom: 5vh;
+          margin: 5vh 0;
 
           &-onelink {
+            font-size: 3em;
 
             &-logo {
               width: 12vh;
@@ -164,13 +166,26 @@
 
 @media screen and (min-width: 900px) and (min-height: 300px) {
   body .navbar {
-    padding: 2vw;
+    padding: 2vw 3vw;
 
     &-website {
 
       &-name {
         font-size: 3vw;
         font-family: 'Arizonia', cursive;
+      }
+    }
+
+    &-nav {
+
+      &-links {
+
+        &-link {
+
+          &-onelink {
+            font-size: .9em;
+          }
+        }
       }
     }
   }

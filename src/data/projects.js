@@ -50,16 +50,6 @@ export default [
   },
   {
     id: 5,
-    name: 'Assistant d\'impression',
-    technology: [
-      'JavaScript Vanilla',
-    ],
-    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer de gros volumes de documents en recto-verso, notamment des Google documents.',
-    website: 'http://test.com',
-    github: 'https://github.com/Abibibi/printing-assistant',
-  },
-  {
-    id: 6,
     name: 'Moteur de recherche de produit',
     technology: [
       'JavaScript Vanilla',
@@ -67,5 +57,15 @@ export default [
     description: 'Après avoir sélectionné une catégorie de produit et renseigné un budget maximal, l\'utilisateur-rice voit apparaître une liste de produits correspondant aux critères saisis.',
     website: 'http://test.com',
     github: 'https://github.com/Abibibi/product-finder',
+  },
+  {
+    id: 6,
+    name: 'Assistant d\'impression',
+    technology: [
+      'JavaScript Vanilla',
+    ],
+    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer de gros volumes de documents en recto-verso, notamment des Google docs.',
+    website: 'http://test.com',
+    github: 'https://github.com/Abibibi/printing-assistant',
   },
 ];

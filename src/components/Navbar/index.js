@@ -1,16 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import './navbar.scss';
-import GitHub from 'src/styles/assets/images/github_navbar.png';
-import LinkedIn from 'src/styles/assets/images/linkedin_navbar.png';
-import Contact from 'src/styles/assets/images/contact_navbar.png';
+import GitHub from 'src/styles/assets/images/navbar/github_navbar.png';
+import LinkedIn from 'src/styles/assets/images/navbar/linkedin_navbar.png';
+import Contact from 'src/styles/assets/images/navbar/contact_navbar.png';
 
 const Navbar = () => {
   const burger = useRef(null);
   const nav = useRef(null);
 
+  // to make sure burger menu is not displayed
+  // when component is first mounted,
+  // but only on click
+  useEffect(() => {
+    nav.current.classList.remove('navbar-nav-links-active');
+  });
+
   const handleResponsiveMenu = () => {
-    nav.current.classList.toggle('navbar-nav-burger-active');
+    nav.current.classList.toggle('navbar-nav-links-active');
   };
 
   return (

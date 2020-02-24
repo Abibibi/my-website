@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './projects.scss';
-import gitHubLogo from 'src/styles/assets/images/github_logo.png';
 import Project from './Project';
 
 const Projects = ({ projects }) => (
@@ -15,6 +14,7 @@ const Projects = ({ projects }) => (
         website,
         demo,
         github,
+        pictures,
       }) => (
         <Project
           id={id}
@@ -25,6 +25,7 @@ const Projects = ({ projects }) => (
           demo={demo}
           github={github}
           key={id}
+          pictures={pictures}
         />
       ))}
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './header.scss';
-import picture from 'src/styles/assets/images/abeba_ngwe.png';
+import picture from 'src/styles/assets/images/abeba/abeba_ngwe.png';
 
 const Header = () => (
   <div className="header">

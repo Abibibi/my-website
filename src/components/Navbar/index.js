@@ -17,24 +17,36 @@ const Navbar = () => {
     nav.current.classList.toggle('navbar-nav-links-active');
   };
 
+  const handleClick = (event) => {
+    if (event.target.textContent === 'Projets') {
+      window.scrollTo({
+        top: document.querySelector('.projects').offsetTop,
+        behavior: 'smooth',
+      });
+    }
+    else if (event.target.textContent === 'Contact') {
+      window.scrollTo({
+        top: document.querySelector('footer').offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="navbar">
       <a className="navbar-website-name" href="#">A.</a>
       <nav className="navbar-nav">
         <ul className="navbar-nav-links" ref={nav}>
-          <li className="navbar-nav-links-link">
+          <li className="navbar-nav-links-link" onClick={handleClick}>
             <a
               className="navbar-nav-links-link-onelink"
             >
               Projets
             </a>
           </li>
-          <li className="navbar-nav-links-link">
+          <li className="navbar-nav-links-link" onClick={handleClick}>
             <a
               className="navbar-nav-links-link-onelink"
-              href="mailto:abeba.ngwe@gmail.com?Subject=Prise de contact"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Contact
             </a>

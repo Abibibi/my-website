@@ -8,7 +8,7 @@ export default [
       'MySQL',
       'Vue.js',
     ],
-    demo: 'https://www.youtube.com/embed/lCcBEDPTk4o',
+    demo: 'https://www.linkedin.com/posts/abebangwe_nodejs-expressjs-sql-activity-6634099045537198080-5kd5',
     github: 'https://github.com/Abibibi/teambuilding-messaging-tool',
     pictures: [
       {

@@ -20,6 +20,10 @@
 
       &-link {
         text-align: right;
+
+        &:hover {
+          color: rgb(39, 90, 202);
+        }
         
         &-onelink {
           font-weight: 600;

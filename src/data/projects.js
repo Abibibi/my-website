@@ -12,22 +12,27 @@ export default [
     github: 'https://github.com/Abibibi/teambuilding-messaging-tool',
     pictures: [
       {
+        id: 1,
         pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_1.png',
         pictureAlt: 'Page d\'accueil du site Gratitude',
       },
       {
+        id: 2,
         pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_2.png',
         pictureAlt: 'Page de création d\'espace du site Gratitude',
       },
       {
+        id: 3,
         pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_3.png',
         pictureAlt: 'Page pour rejoindre un espace sur le site Gratitude',
       },
       {
+        id: 4,
         pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_4.png',
         pictureAlt: 'Page pour envoyer un message sur le site Gratitude',
       },
       {
+        id: 5,
         pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_5.png',
         pictureAlt: 'Page où consulter ses messages reçus sur le site Gratitude',
       },

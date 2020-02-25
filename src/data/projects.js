@@ -40,7 +40,7 @@ export default [
   },
   {
     id: 2,
-    name: 'Réseau social axé séries',
+    name: 'Réseau social 100 % séries',
     description: 'Serial Killer est à la fois une bibliothèque d\'information et un réseau social sur les séries, où les utilisateurs peuvent publier des avis, chatter et s\'abonner les uns aux autres.',
     technology: [
       'Express.js',
@@ -120,6 +120,20 @@ export default [
     ],
     demo: 'https://www.linkedin.com/posts/abebangwe_javascript-vuejs-nodejs-activity-6627935589566038016-guO2',
     github: 'https://github.com/Abibibi/next-trip-countdown',
+    pictures: [
+      {
+        bigPictureContent: 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_1.png',
+        bigPictureAlt: 'Formulaire où renseigner son prénom (ici, Abi) ainsi que son prochain lieu (ici, Kinshasa) et sa prochaine date de séjour (ici, le 8 mars 2020)',
+      },
+      {
+        bigPictureContent: 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_2.png',
+        bigPictureAlt: 'Affichage d\'une photo en arrière-plan représentant le lieu de séjour et d\'un compte à rebours d\'ici la date de séjour (soit d\'ici le 8 mars 2020)',
+      },
+      {
+        bigPictureContent: 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_3.png',
+        bigPictureAlt: 'Affichage d\'une photo en arrière-plan représentant le lieu de séjour et d\'un compte à rebours d\'ici une date déjà passée. Le compte à rebours affiche 00:00:00',
+      },
+    ],
   },
   {
     id: 4,

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import classNames from 'classnames';
 
 import './projects.scss';
 
@@ -41,9 +40,12 @@ const Project = ({
   // smartphone screenshots
   useEffect(() => {
     if (pictures) {
-      const isSmallPicture = pictures.map(({ smallPictureContent }) => {
+      const isSmallPicture = pictures.find(({ smallPictureContent, bigPictureContent }) => {
         if (smallPictureContent) {
           arrows.current.classList.add('project-slider-arrows-smallPicture');
+        }
+        else if (bigPictureContent) {
+          arrows.current.classList.remove('project-slider-arrows-smallPicture');
         }
       });
     }

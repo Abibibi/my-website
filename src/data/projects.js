@@ -122,14 +122,17 @@ export default [
     github: 'https://github.com/Abibibi/next-trip-countdown',
     pictures: [
       {
+        id: 1,
         bigPictureContent: 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_1.png',
         bigPictureAlt: 'Formulaire où renseigner son prénom (ici, Abi) ainsi que son prochain lieu (ici, Kinshasa) et sa prochaine date de séjour (ici, le 8 mars 2020)',
       },
       {
+        id: 2,
         bigPictureContent: 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_2.png',
         bigPictureAlt: 'Affichage d\'une photo en arrière-plan représentant le lieu de séjour et d\'un compte à rebours d\'ici la date de séjour (soit d\'ici le 8 mars 2020)',
       },
       {
+        id: 3,
         bigPictureContent: 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_3.png',
         bigPictureAlt: 'Affichage d\'une photo en arrière-plan représentant le lieu de séjour et d\'un compte à rebours d\'ici une date déjà passée. Le compte à rebours affiche 00:00:00',
       },
@@ -141,10 +144,27 @@ export default [
     technology: [
       'JavaScript Vanilla',
     ],
-    description: 'Au clic sur le bouton rejouer, une nouvelle prédiction pour 2020 apparaît. Inspiré du filtre Instagram "In 2020 I will be".',
+    description: 'Au clic sur le bouton "Rejouer", une nouvelle prédiction pour 2020 apparaît. Inspiré du filtre Instagram "In 2020 I will be".',
     demo: 'https://www.linkedin.com/posts/abebangwe_javascript-ugcPost-6631169661461377024-jmVz',
     website: 'http://test.com',
     github: 'https://github.com/Abibibi/2020-prediction-game',
+    pictures: [
+      {
+        id: 1,
+        smallPictureContent: 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_1.png',
+        smallPictureAlt: 'Affichage d\'une prédiction pour 2020 : "En 2020, je... stalkerai mes collègues sur GitHub"',
+      },
+      {
+        id: 2,
+        smallPictureContent: 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_2.png',
+        smallPictureAlt: 'Affichage d\'une prédiction pour 2020 : "En 2020, je... partagerai mon code"',
+      },
+      {
+        id: 3,
+        smallPictureContent: 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_3.png',
+        smallPictureAlt: 'Affichage d\'une prédiction pour 2020 : "En 2020, je... continuerai le cardio-kickboxing"',
+      },
+    ],
   },
   {
     id: 5,
@@ -155,6 +175,23 @@ export default [
     description: 'Après avoir sélectionné une catégorie de produit et renseigné un budget maximal, l\'utilisateur-rice voit apparaître une liste de produits correspondant aux critères saisis.',
     website: 'http://test.com',
     github: 'https://github.com/Abibibi/product-finder',
+    pictures: [
+      {
+        id: 1,
+        bigPictureContent: 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_1.png',
+        bigPictureAlt: 'Page d\'accueil où apparaissent des suggestions de produits capillaires',
+      },
+      {
+        id: 2,
+        bigPictureContent: 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_2.png',
+        bigPictureAlt: 'Page où apparaissent tous les laits capillaires',
+      },
+      {
+        id: 3,
+        bigPictureContent: 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_3.png',
+        bigPictureAlt: 'Page où apparaissent tous les après-shampoings en-dessous de 15€ après soumission d\'un formulaire par l\'utilisateur ou l\'utilisatrice',
+      },
+    ],
   },
   {
     id: 6,
@@ -162,8 +199,25 @@ export default [
     technology: [
       'JavaScript Vanilla',
     ],
-    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer de gros volumes de documents en recto-verso, notamment des Google docs.',
+    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer de gros volumes de documents en recto-verso.',
     website: 'http://test.com',
     github: 'https://github.com/Abibibi/printing-assistant',
+    pictures: [
+      {
+        id: 1,
+        smallPictureContent: 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_1.png',
+        smallPictureAlt: 'Formulaire où renseigner un chiffre minimal et un chiffre maximal pour obtenir une suite de chiffres soit paire soit impaire, ce qui est pratique pour les impressions recto-verso.',
+      },
+      {
+        id: 2,
+        smallPictureContent: 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_2.png',
+        smallPictureAlt: 'Affichage d\'une suite impaire après soumission du formulaire',
+      },
+      {
+        id: 3,
+        smallPictureContent: 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_3.png',
+        smallPictureAlt: 'Affichage d\'une suite paire après soumission du formulaire',
+      },
+    ],
   },
 ];

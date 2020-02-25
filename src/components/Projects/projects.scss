@@ -5,7 +5,7 @@
 
   &-title {
     text-transform: uppercase;
-    color: #ffffff;
+    color: #ffffff;/*  */
     text-align: center;
     font-size: 5vh;
     height: 36vh;
@@ -258,7 +258,7 @@
 @media (min-width: 1000px) {
   .projects {
     &-all {
-      padding: 0 1.4rem;
+      padding: 0 4rem;
     }
   }
 

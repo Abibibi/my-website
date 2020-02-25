@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Messagerie d\'entreprise orientée teambuilding',
-    description: 'Gratitude est une application où les collaborateurs d\'une même équipe peuvent s\'envoyer des messages d\'encouragement ou de reconnaissance de façon anonyme. Rien de calculé, que de l\'honnêteté.',
+    description: 'Gratitude est une application où des collègues peuvent s\'envoyer des messages d\'encouragement de façon anonyme. Rien de calculé, que de l\'honnêteté.',
     technology: [
       'Express.js',
       'MySQL',

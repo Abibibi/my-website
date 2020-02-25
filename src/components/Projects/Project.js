@@ -14,11 +14,7 @@ const Project = ({
   const sliderContent = useRef(null);
   const sliderContentInner = useRef(null);
   const img = useRef(null);
-  /* const [deltaX, setDeltaX] = useState(0); */
   let deltaX = 0;
-  useEffect(() => {
-
-  }, [deltaX]);
 
   const displayPicture = (event) => {
     if (event.target.className.includes('left') || event.keyCode === 37) {
@@ -28,25 +24,18 @@ const Project = ({
       deltaX -= img.current.width;
 	    deltaX %= pictures.length*img.current.width;
 
-      /* setDeltaX(deltaX => deltaX - img.current.width);
-      setDeltaX(deltaX => deltaX % pictures.length*img.current.width); */
-
       console.log(deltaX);
 
       if (deltaX < 0) {
         deltaX = 0;
-        /* setDeltaX(deltaX => 0); */
       }
     }
     else {
       console.log('right pressed');
 
       deltaX += img.current.width;
-	    deltaX %= pictures.length*img.current.width;
-
-      /* setDeltaX(deltaX => deltaX + img.current.width);
-      setDeltaX(deltaX => deltaX % pictures.length*img.current.width); */
-
+      deltaX %= pictures.length*img.current.width;
+      
       console.log(deltaX);
     }
 

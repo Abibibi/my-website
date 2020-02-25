@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
 import './navbar.scss';
-import GitHub from 'src/styles/assets/images/navbar/github_navbar.png';
-import LinkedIn from 'src/styles/assets/images/navbar/linkedin_navbar.png';
-import Contact from 'src/styles/assets/images/navbar/contact_navbar.png';
 
 const Navbar = () => {
   const burger = useRef(null);
@@ -28,31 +25,8 @@ const Navbar = () => {
           <li className="navbar-nav-links-link">
             <a
               className="navbar-nav-links-link-onelink"
-              href="https://github.com/Abibibi"
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              GitHub
-              {/* <img
-                className="navbar-nav-links-link-onelink-logo"
-                src={GitHub}
-                alt="Logo Github"
-              /> */}
-            </a>
-          </li>
-          <li className="navbar-nav-links-link">
-            <a
-              className="navbar-nav-links-link-onelink"
-              href="https://www.linkedin.com/in/abebangwe/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-              {/* <img
-                className="navbar-nav-links-link-onelink-logo"
-                src={LinkedIn}
-                alt="Logo LinkedIn"
-              /> */}
+              Projets
             </a>
           </li>
           <li className="navbar-nav-links-link">
@@ -63,11 +37,6 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               Contact
-              {/* <img
-                className="navbar-nav-links-link-onelink-logo"
-                src={Contact}
-                alt="Contact"
-              /> */}
             </a>
           </li>
         </ul>

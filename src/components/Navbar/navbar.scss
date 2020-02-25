@@ -7,7 +7,7 @@
   width: 100%;
 
   &-nav {
-    width: 21vw;
+    width: 11vw;
     font-size: 1.3vw;
     display: flex;
 
@@ -20,6 +20,7 @@
 
       &-link {
         text-align: right;
+        cursor: pointer;
 
         &:hover {
           color: rgb(127, 206, 252);

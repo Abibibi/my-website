@@ -18,25 +18,18 @@ const Project = ({
 
   const displayPicture = (event) => {
     if (event.target.className.includes('left') || event.keyCode === 37) {
-
-      console.log('left pressed');
-
       deltaX -= img.current.width;
-	    deltaX %= pictures.length*img.current.width;
 
-      console.log(deltaX);
+      deltaX %= pictures.length*img.current.width;
 
       if (deltaX < 0) {
         deltaX = 0;
       }
     }
     else {
-      console.log('right pressed');
-
       deltaX += img.current.width;
+
       deltaX %= pictures.length*img.current.width;
-      
-      console.log(deltaX);
     }
 
     sliderContentInner.current.style.marginLeft = `-${deltaX}px`;
@@ -52,15 +45,30 @@ const Project = ({
       <div ref={slider} className="project-slider" tabIndex="-1">
         <div ref={sliderContent} className="project-slider-content">
           <div ref={sliderContentInner} className="project-slider-content-inner">
-            {pictures && pictures.map(({ id, pictureContent, pictureAlt }) => (
-              <img
-                src={pictureContent}
-                alt={pictureAlt}
-                className="project-slider-content-inner-picture"
-                ref={img}
-                key={id}
-              />
-            ))}
+            {pictures && pictures.map(({ id, bigPictureContent, bigPictureAlt, smallPictureContent, smallPictureAlt }) => {
+              if (bigPictureContent) {
+                return (
+                  <img
+                    src={bigPictureContent}
+                    alt={bigPictureAlt}
+                    className="project-slider-content-inner-picture"
+                    ref={img}
+                    key={id}
+                  />
+                );
+              }
+              else {
+                return (
+                  <img
+                    src={smallPictureContent}
+                    alt={smallPictureAlt}
+                    className="project-slider-content-inner-picture"
+                    ref={img}
+                    key={id}
+                  />
+                );
+              }
+            })}
           </div>
         </div>
         <div className="project-slider-arrows">

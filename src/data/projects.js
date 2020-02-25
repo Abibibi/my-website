@@ -13,28 +13,28 @@ export default [
     pictures: [
       {
         id: 1,
-        pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_1.png',
-        pictureAlt: 'Page d\'accueil du site Gratitude',
+        bigPictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_1.png',
+        bigPictureAlt: 'Page d\'accueil du site Gratitude',
       },
       {
         id: 2,
-        pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_2.png',
-        pictureAlt: 'Page de création d\'espace du site Gratitude',
+        bigPictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_2.png',
+        bigPictureAlt: 'Page de création d\'espace du site Gratitude',
       },
       {
         id: 3,
-        pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_3.png',
-        pictureAlt: 'Page pour rejoindre un espace sur le site Gratitude',
+        bigPictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_3.png',
+        bigPictureAlt: 'Page pour rejoindre un espace sur le site Gratitude',
       },
       {
         id: 4,
-        pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_4.png',
-        pictureAlt: 'Page pour envoyer un message sur le site Gratitude',
+        bigPictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_4.png',
+        bigPictureAlt: 'Page pour envoyer un message sur le site Gratitude',
       },
       {
         id: 5,
-        pictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_5.png',
-        pictureAlt: 'Page où consulter ses messages reçus sur le site Gratitude',
+        bigPictureContent: 'src/styles/assets/images/screenshots/gratitude/device/gratitude_5.png',
+        bigPictureAlt: 'Page où consulter ses messages reçus sur le site Gratitude',
       },
     ],
   },
@@ -51,6 +51,13 @@ export default [
     website: 'http://serialkiller.abebangwe.com/',
     demo: 'https://www.youtube.com/watch?v=36cu4wNc2OA',
     github: 'https://github.com/Abibibi/tv-show-social-network',
+    pictures: [
+      {
+        id: 1,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_1.png',
+        smallPictureAlt: 'Page où sélectionner un genre de série',
+      }
+    ]
   },
   {
     id: 3,

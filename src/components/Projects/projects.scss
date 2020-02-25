@@ -3,6 +3,17 @@
   border-top: 1.4px solid gray;
   border-bottom: 1.4px solid gray;
 
+  &-title {
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    font-size: 5vh;
+    height: 36vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &-all {
     display: flex;
     flex-direction: column;
@@ -11,10 +22,11 @@
 
 .project {
   display: flex;
+  margin-bottom: 18vh;
 
   &-slider {
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 5vh;
     outline: none;
     display: flex;
     align-items: center;
@@ -44,7 +56,7 @@
       justify-content: space-between;
       position: absolute;
       width: 100%;
-      top: 50%;
+      top: 38%;
       left: 0;
 
       &-arrow {
@@ -75,7 +87,8 @@
     }
 
     &-arrows-smallPicture {
-      padding: 0 12%;
+      padding: 0 21%;
+      top: 50%;
     }
   }
 
@@ -134,12 +147,11 @@
 
   .project {
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     
     &-slider {
-      height: 45%;
+      /* height: 45%; */
       width: 100%;
-      margin: 2rem 0;
 
       &-content {
         width: 70%;
@@ -155,7 +167,7 @@
     }
 
     &-details {
-      height: 55%;
+      /* height: 55%; */
 
       &-title {
         text-align: center;
@@ -175,7 +187,6 @@
     flex-direction: column;
 
     &-slider {
-      margin: 0 auto;
       width: 80%;
       
       &-content {
@@ -254,15 +265,15 @@
   .project {
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    /* height: 85vh; */
     align-items: center;
 
     &-slider {
-      height: 100%;
+      /* height: 100%; */
       width: 50%;
 
       &-content {
-        width: 80%;
+        width: 70%;
 
         &-inner {
           width: 100%;
@@ -275,7 +286,7 @@
     }
 
     &-details {
-      height: 100%;
+      /* height: 100%; */
       width: 50%;
       display: flex;
       flex-direction: column;

@@ -7,7 +7,7 @@ import Project from './Project';
 
 const Projects = () => (
   <div className="projects">
-    <h1 className="projects-title">Projets</h1>
+    <div className="projects-title"><h1>Projets</h1></div>
     <div className="projects-all">
       {projects.map(({
         id,

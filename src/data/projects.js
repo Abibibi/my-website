@@ -75,7 +75,7 @@ export default [
   {
     id: 2,
     name: 'Réseau social 100 % séries',
-    description: 'Serial Killer est à la fois une bibliothèque d\'information et un réseau social sur les séries, où les utilisateurs peuvent publier des avis, chatter et s\'abonner les uns aux autres.',
+    description: 'Serial Killer est à la fois une bibliothèque d\'information et un réseau social autour des séries, où les utilisateurs peuvent publier des avis, chatter et s\'abonner les uns aux autres.',
     technology: [
       'Express.js',
       'PostgreSQL',
@@ -233,7 +233,7 @@ export default [
     technology: [
       'JavaScript Vanilla',
     ],
-    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer de gros volumes de documents en recto-verso.',
+    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer des documents volumineux en recto-verso.',
     website: 'http://test.com',
     github: 'https://github.com/Abibibi/printing-assistant',
     pictures: [

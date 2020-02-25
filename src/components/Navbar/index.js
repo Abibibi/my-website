@@ -6,13 +6,6 @@ const Navbar = () => {
   const burger = useRef(null);
   const nav = useRef(null);
 
-  // to make sure burger menu is not displayed
-  // when component is first mounted,
-  // but only on click
-  useEffect(() => {
-    nav.current.classList.remove('navbar-nav-links-active');
-  });
-
   const handleResponsiveMenu = () => {
     nav.current.classList.toggle('navbar-nav-links-active');
   };

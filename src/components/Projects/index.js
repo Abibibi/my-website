@@ -1,10 +1,13 @@
 import React from 'react';
 
 import './projects.scss';
+import projects from 'src/data/projects';
 import Project from './Project';
 
-const Projects = ({ projects }) => (
+
+const Projects = () => (
   <div className="projects">
+    <h1 className="projects-title">Projets</h1>
     <div className="projects-all">
       {projects.map(({
         id,

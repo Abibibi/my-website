@@ -5,7 +5,7 @@ import React from 'react';
 import './app.scss';
 import Navbar from 'src/components/Navbar';
 import Header from 'src/components/Header';
-import Projects from 'src/containers/Projects';
+import Projects from 'src/components/Projects';
 import Footer from 'src/components/Footer';
 
 // == Composant

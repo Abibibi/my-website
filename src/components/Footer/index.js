@@ -9,15 +9,6 @@ const Footer = () => (
       <div className="footer-container-links">
         <p>
           <a
-            href="mailto:abeba.ngwe@gmail.com?Subject=Prise de contact"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            E-mail
-          </a>
-        </p>
-        <p>
-          <a
             href="https://github.com/Abibibi"
             target="_blank"
             rel="noopener noreferrer"

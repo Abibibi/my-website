@@ -1,9 +1,11 @@
+// 1st project pictures imports
 import gratitudePicture1 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_1.png';
 import gratitudePicture2 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_2.png';
 import gratitudePicture3 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_3.png';
 import gratitudePicture4 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_4.png';
 import gratitudePicture5 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_5.png';
 
+// 2nd project pictures imports
 import serialKillerPicture1 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_1.png';
 import serialKillerPicture2 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_2.png';
 import serialKillerPicture3 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_3.png';
@@ -16,18 +18,22 @@ import serialKillerPicture9 from 'src/styles/assets/images/screenshots/serialkil
 import serialKillerPicture10 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_10.png';
 import serialKillerPicture11 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_11.png';
 
+// 3rd project pictures imports
 import mesProchainesVacancesPicture1 from 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_1.png';
 import mesProchainesVacancesPicture2 from 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_2.png';
 import mesProchainesVacancesPicture3 from 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_3.png';
 
+// 4th project pictures imports
 import monAnnee2020Picture1 from 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_1.png';
 import monAnnee2020Picture2 from 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_2.png';
 import monAnnee2020Picture3 from 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_3.png';
 
+// 5th project pictures imports
 import moteurProduit1 from 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_1.png';
 import moteurProduit2 from 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_2.png';
 import moteurProduit3 from 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_3.png';
 
+// 6th project pictures imports
 import assistantImpression1 from 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_1.png';
 import assistantImpression2 from 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_2.png';
 import assistantImpression3 from 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_3.png';
@@ -191,7 +197,7 @@ export default [
       {
         id: 2,
         smallPictureContent: monAnnee2020Picture2,
-        smallPictureAlt: 'Affichage d\'une prédiction pour 2020 : "En 2020, je... partagerai mon code"',
+        smallPictureAlt: 'Affichage d\'une prédiction pour 2020 : "En 2020, je... soutiendrai des campagnes de crowdfunding"',
       },
       {
         id: 3,
@@ -233,7 +239,7 @@ export default [
     technology: [
       'JavaScript Vanilla',
     ],
-    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer des documents volumineux en recto-verso.',
+    description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer des documents volumineux au format recto-verso.',
     website: 'http://test.com',
     github: 'https://github.com/Abibibi/printing-assistant',
     pictures: [

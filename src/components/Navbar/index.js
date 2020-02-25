@@ -26,7 +26,7 @@ const Navbar = () => {
     }
     else if (event.target.textContent === 'Contact') {
       window.scrollTo({
-        top: document.querySelector('footer').offsetTop,
+        top: document.querySelector('.form').offsetTop,
         behavior: 'smooth',
       });
     }

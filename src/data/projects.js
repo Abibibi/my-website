@@ -40,7 +40,7 @@ export default [
   },
   {
     id: 2,
-    name: 'Réseau social sur les séries',
+    name: 'Réseau social axé séries',
     description: 'Serial Killer est à la fois une bibliothèque d\'information et un réseau social sur les séries, où les utilisateurs peuvent publier des avis, chatter et s\'abonner les uns aux autres.',
     technology: [
       'Express.js',
@@ -56,8 +56,58 @@ export default [
         id: 1,
         smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_1.png',
         smallPictureAlt: 'Page où sélectionner un genre de série',
-      }
-    ]
+      },
+      {
+        id: 2,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_2.png',
+        smallPictureAlt: 'Page de présentation de la série Shrill : la vidéo apparaît en haut de la page',
+      },
+      {
+        id: 3,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_3.png',
+        smallPictureAlt: 'Page de présentation de la série The Handmaid\'s Tale : le résumé apparaît en milieu de page',
+      },
+      {
+        id: 4,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_4.png',
+        smallPictureAlt: 'Page affichant les résultats d\'une recherche de série. La recherche effectuée est "se" et trois résultats apparaissent, dont la série "See" en premier',
+      },
+      {
+        id: 5,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_5.png',
+        smallPictureAlt: 'Fil d\'actualité : il est possible d\'y publier un avis sur une série.',
+      },
+      {
+        id: 6,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_6.png',
+        smallPictureAlt: 'Fil d\'actualité : il est possible d\'y consulter tous les avis émis par les membres du site',
+      },
+      {
+        id: 7,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_7.png',
+        smallPictureAlt: 'Page où apparaissent les résultats d\'une recherche de membre. La recherche effectuée est "j" et le profil qui est affiché est celui du membre Juju, dont il est possible de se désabonner.',
+      },
+      {
+        id: 8,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_8.png',
+        smallPictureAlt: 'Page de profil du membre connecté en sessions. Y apparaissent une bannière, une photo de profil, le pseudo et les "infos" de l\'utilisateur (Prénom, nom, adresse e-mail)',
+      },
+      {
+        id: 9,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_9.png',
+        smallPictureAlt: 'Jeu disponible sur le profil d\'un utilisateur : au clic sur un bouton, le taux d\'addiction aux séries est révélé',
+      },
+      {
+        id: 10,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_10.png',
+        smallPictureAlt: 'Abonnements de l\'utilisateur connecté en session.',
+      },
+      {
+        id: 11,
+        smallPictureContent: 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_11.png',
+        smallPictureAlt: 'Messagerie instantanée, disponible sur toutes les pages',
+      },
+    ],
   },
   {
     id: 3,

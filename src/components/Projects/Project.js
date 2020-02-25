@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import classNames from 'classnames';
 
 import './projects.scss';
 
@@ -13,6 +14,7 @@ const Project = ({
   const slider = useRef(null);
   const sliderContent = useRef(null);
   const sliderContentInner = useRef(null);
+  const arrows = useRef(null);
   const img = useRef(null);
   let deltaX = 0;
 
@@ -20,20 +22,33 @@ const Project = ({
     if (event.target.className.includes('left') || event.keyCode === 37) {
       deltaX -= img.current.width;
 
-      deltaX %= pictures.length*img.current.width;
+      deltaX %= pictures.length * img.current.width;
 
       if (deltaX < 0) {
         deltaX = 0;
       }
     }
-    else {
+    else if (event.target.className.includes('right') || event.keyCode === 39) {
       deltaX += img.current.width;
 
-      deltaX %= pictures.length*img.current.width;
+      deltaX %= pictures.length * img.current.width;
     }
 
     sliderContentInner.current.style.marginLeft = `-${deltaX}px`;
   };
+
+  // to make arrows width smaller when displaying
+  // smartphone screenshots
+  useEffect(() => {
+    if (pictures) {
+      const isSmallPicture = pictures.map(({ smallPictureContent }) => {
+        if (smallPictureContent) {
+          arrows.current.classList.add('project-slider-arrows-smallPicture');
+        }
+      });
+    }
+  });
+ 
 
   return (
     <div className="project">
@@ -42,7 +57,7 @@ const Project = ({
       right arrow keys are pressed,
       previous or next picture is showed
       respectively */}
-      <div ref={slider} className="project-slider" tabIndex="-1">
+      <div ref={slider} className="project-slider" tabIndex="-1" onKeyDown={displayPicture}>
         <div ref={sliderContent} className="project-slider-content">
           <div ref={sliderContentInner} className="project-slider-content-inner">
             {pictures && pictures.map(({ id, bigPictureContent, bigPictureAlt, smallPictureContent, smallPictureAlt }) => {
@@ -71,7 +86,7 @@ const Project = ({
             })}
           </div>
         </div>
-        <div className="project-slider-arrows">
+        <div className="project-slider-arrows" ref={arrows}>
           <div><i className="project-slider-arrows-arrow project-slider-arrows-left" onClick={displayPicture} /></div>
           <div><i className="project-slider-arrows-arrow project-slider-arrows-right" onClick={displayPicture} /></div>
         </div>

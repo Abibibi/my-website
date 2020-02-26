@@ -1,3 +1,61 @@
 .form {
   background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-content {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-label {
+      width: 100%;
+      font-size: 2.6vh;
+    }
+
+    &-input {
+      font-size: 2.5vh;
+      font-family: 'Roboto', sans-serif;
+      padding: 1vw;
+      outline: none;
+      color: #c7c7c7;
+      display: block;
+      border: none;
+      margin: 1.5vh 0 5vh;
+      background-color: rgb(44, 44, 44);
+      width: 100%;
+      height: 5vh;
+    }
+
+    &-textarea {
+      resize: none;
+      height: 25vh;
+      margin-bottom: 8vh;
+    }
+
+    &-button {
+      width: 30%;
+      background-color: rgb(44, 44, 44);
+      border: none;
+      color: #ffffff;
+      padding: 2vh;
+      margin-bottom: 15vh;
+      font-size: 2.2vh;
+
+      &:hover {
+        background-color: #c7c7c7;
+        color: #000000;
+      }
+
+      &:active {
+        position: relative;
+        top: .3vh;
+      }
+    }
+
+  }
 }

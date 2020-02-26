@@ -123,9 +123,11 @@
         word-wrap: normal;
         display: inline-block;
         margin: 0 2.5vw;
+        border: 1px solid #ffffff;
   
         &:hover {
           background-color: #000000;
+          border: 1px solid #ffffff;
           color: #ffffff;
         }
   

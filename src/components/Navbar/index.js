@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <a className="navbar-website-name" href="#">A.</a>
+      <a className="navbar-website-name" href="#">Abeba Ngwe</a>
       <nav className="navbar-nav">
         <ul className="navbar-nav-links" ref={nav}>
           <li className="navbar-nav-links-link" onClick={handleClick}>

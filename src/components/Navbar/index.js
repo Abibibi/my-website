@@ -23,11 +23,17 @@ const Navbar = () => {
         behavior: 'smooth',
       });
     }
+    else if (event.target.textContent === 'Abeba Ngwe') {
+      window.scrollTo({
+        top: document.querySelector('.navbar-website-name').offsetTop,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
     <div className="navbar">
-      <a className="navbar-website-name fade" href="#">Abeba Ngwe</a>
+      <a className="navbar-website-name fade" onClick={handleClick}>Abeba Ngwe</a>
       <nav className="navbar-nav">
         <ul className="navbar-nav-links fade" ref={nav}>
           <li className="navbar-nav-links-link" onClick={handleClick}>

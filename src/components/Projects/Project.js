@@ -36,22 +36,6 @@ const Project = ({
     sliderContentInner.current.style.marginLeft = `-${deltaX}px`;
   };
 
-  // to make arrows width smaller when displaying
-  // smartphone screenshots
-  useEffect(() => {
-    if (pictures) {
-      const isSmallPicture = pictures.find(({ smallPictureContent, bigPictureContent }) => {
-        if (smallPictureContent) {
-          arrows.current.classList.add('project-slider-arrows-smallPicture');
-        }
-        else if (bigPictureContent) {
-          arrows.current.classList.remove('project-slider-arrows-smallPicture');
-        }
-      });
-    }
-  });
- 
-
   return (
     <div className="project">
       {/* tabIndex property to make sure
@@ -62,30 +46,15 @@ const Project = ({
       <div ref={slider} className="project-slider" tabIndex="-1" onKeyDown={displayPicture}>
         <div ref={sliderContent} className="project-slider-content">
           <div ref={sliderContentInner} className="project-slider-content-inner">
-            {pictures && pictures.map(({ id, bigPictureContent, bigPictureAlt, smallPictureContent, smallPictureAlt }) => {
-              if (bigPictureContent) {
-                return (
-                  <img
-                    src={bigPictureContent}
-                    alt={bigPictureAlt}
-                    className="project-slider-content-inner-picture"
-                    ref={img}
-                    key={id}
-                  />
-                );
-              }
-              else {
-                return (
-                  <img
-                    src={smallPictureContent}
-                    alt={smallPictureAlt}
-                    className="project-slider-content-inner-picture"
-                    ref={img}
-                    key={id}
-                  />
-                );
-              }
-            })}
+            {pictures && pictures.map(({ id, pictureContent, pictureAlt }) => (
+              <img
+                src={pictureContent}
+                alt={pictureAlt}
+                className="project-slider-content-inner-picture"
+                ref={img}
+                key={id}
+              />
+            ))}
           </div>
         </div>
         <div className="project-slider-arrows" ref={arrows}>

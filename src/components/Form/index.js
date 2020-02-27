@@ -23,7 +23,7 @@ const Form = () => {
 
   const submissionMessage = useRef(null);
 
-  const inputValidation = (field, blur) => {
+  const inputValidation = (field) => {
     let regexValue = '';
 
     switch (field) {
@@ -44,10 +44,8 @@ const Form = () => {
 
     if (values[field]) {
       if (!values[field].match(regexValue)) {
-        if (blur) {
-          // this is only executed on blur, not on change
-          setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
-        }
+        // this is only executed on blur, not on change
+        setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
       }
       // if value entered match requirements,
       // error message is not displayed anymore
@@ -55,15 +53,25 @@ const Form = () => {
         setErrors((prevErrors) => ({ ...prevErrors, [field]: false }));
       }
     }
-    // if no value is entered (typically, on blur)
-    // error message is not displayed anymore
+    // on blur, if no value was entered,
+    // error message is displayed
     else {
-      setErrors((prevErrors) => ({ ...prevErrors, [field]: false }));
+      setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
     }
   };
 
   const handleChange = (event) => {
     event.persist();
+
+    // if user changes inputs after previous form submission,
+    // previous submission and error messages
+    // should not be displayed anymore initially
+    setSubmission({
+      ...submission,
+      success: false,
+      fail: false,
+    });
+
     setValues(({ ...values, [event.target.name]: event.target.value }));
 
     inputValidation(event.target.name);
@@ -79,23 +87,11 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    Object.keys(values).forEach((key) => {
+      inputValidation(key);
+    });
+
     if (errors.name || errors.email || errors.message) {
-      return;
-    }
-
-    if (!values.name) {
-      setErrors((prevErrors) => ({ ...prevErrors, name: true }));
-    }
-
-    if (!values.email) {
-      setErrors((prevErrors) => ({ ...prevErrors, email: true }));
-    }
-
-    if (!values.message) {
-      setErrors((prevErrors) => ({ ...prevErrors, message: true }));
-    }
-
-    if (!values.name || !values.email || !values.message) {
       return;
     }
 
@@ -157,7 +153,7 @@ const Form = () => {
               value={values.name}
               onChange={handleChange}
               onBlur={() => {
-                inputValidation('name', 'blur');
+                inputValidation('name');
               }}
             />
           </label>
@@ -172,7 +168,7 @@ const Form = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={() => {
-                inputValidation('email', 'blur');
+                inputValidation('email');
               }}
             />
           </label>
@@ -187,7 +183,7 @@ const Form = () => {
               value={values.message}
               onChange={handleChange}
               onBlur={() => {
-                inputValidation('message', 'blur');
+                inputValidation('message');
               }}
             />
           </label>

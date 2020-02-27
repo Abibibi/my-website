@@ -117,7 +117,7 @@
   }
 }
 
-@media screen and (min-width: 1020px) and (min-height: 1300px) and (max-height: 1370px) {
+@media screen and (min-width: 700px) and (max-width: 1100px) and (min-height: 1000px) and (max-height: 1370px) {
   html body .navbar {
     padding: 2em;
 
@@ -127,6 +127,7 @@
         letter-spacing: .2em;
         font-size: 2.8em;
         display: block;
+        width: 23rem;
       }
     }
 
@@ -159,6 +160,13 @@
 
       &-burger {
         display: block;
+
+        &-line {
+          width: 2rem;
+          height: 0.3rem;
+          background-color: #d8d2d2;
+          margin: .4rem;
+        }
       }
     }
   }

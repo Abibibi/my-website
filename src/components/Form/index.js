@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './form.scss';
 
@@ -20,8 +20,6 @@ const Form = () => {
     email: false,
     message: false,
   });
-
-  const submissionMessage = useRef(null);
 
   const inputValidation = (field) => {
     let regexValue = '';
@@ -55,9 +53,11 @@ const Form = () => {
     }
     // on blur, if no value was entered,
     // error message is displayed
-    else {
+    else if (!values[field]) {
       setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
     }
+
+    return errors[field];
   };
 
   const handleChange = (event) => {
@@ -83,15 +83,26 @@ const Form = () => {
       .join('&')
   );
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    Object.keys(values).forEach((key) => {
-      inputValidation(key);
-    });
-
     if (errors.name || errors.email || errors.message) {
+      return;
+    }
+
+    if (!values.name) {
+      setErrors((prevErrors) => ({ ...prevErrors, name: true }));
+    }
+
+    if (!values.email) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: true }));
+    }
+
+    if (!values.message) {
+      setErrors((prevErrors) => ({ ...prevErrors, message: true }));
+    }
+
+    if (!values.name || !values.email || !values.message) {
       return;
     }
 
@@ -132,7 +143,7 @@ const Form = () => {
       .finally(() => {
         // to make sure submission result is visible
         window.scrollTo({
-          top: submissionMessage.offsetTop,
+          top: document.querySelector('footer').offsetTop,
           behavior: 'smooth',
         });
       });
@@ -154,6 +165,7 @@ const Form = () => {
               onChange={handleChange}
               onBlur={() => {
                 inputValidation('name');
+                console.log(errors);
               }}
             />
           </label>
@@ -191,8 +203,8 @@ const Form = () => {
         </div>
         <button className="form-content-button" type="submit">Envoyer</button>
       </form>
-      {submission.success && <div className="form-submission" ref={submissionMessage}>Merci pour votre message. Je vous répondrai bientôt.</div>}
-      {submission.fail && <div className="form-submission" ref={submissionMessage}>Votre message n'a pas été envoyé. Veuillez le soumettre à nouveau.</div>}
+      {submission.success && <div className="form-submission">Merci pour votre message. Je vous répondrai bientôt.</div>}
+      {submission.fail && <div className="form-submission">Votre message n'a pas été envoyé. Veuillez le soumettre à nouveau.</div>}
     </div>
   );
 };

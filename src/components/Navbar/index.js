@@ -27,9 +27,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <a className="navbar-website-name" href="#">Abeba Ngwe</a>
+      <a className="navbar-website-name fade" href="#">Abeba Ngwe</a>
       <nav className="navbar-nav">
-        <ul className="navbar-nav-links" ref={nav}>
+        <ul className="navbar-nav-links fade" ref={nav}>
           <li className="navbar-nav-links-link" onClick={handleClick}>
             <a
               className="navbar-nav-links-link-onelink"
@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <div className="navbar-nav-burger" ref={burger} onClick={handleResponsiveMenu}>
+        <div className="navbar-nav-burger fade" ref={burger} onClick={handleResponsiveMenu}>
           <div className="navbar-nav-burger-line navbar-nav-burger-line1" />
           <div className="navbar-nav-burger-line navbar-nav-burger-line2" />
           <div className="navbar-nav-burger-line navbar-nav-burger-line3" />

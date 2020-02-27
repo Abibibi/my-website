@@ -108,6 +108,10 @@ const Form = () => {
     }
 
     if (!values.name || !values.email || !values.message) {
+      window.scrollTo({
+        top: document.querySelector('.form').offsetTop,
+        behavior: 'smooth',
+      });
       return;
     }
 
@@ -120,7 +124,7 @@ const Form = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...values }),
     })
-      .then((response) => {
+      .then(() => {
         setSubmission({ ...submission, success: true, fail: false });
         setValues({
           ...values,
@@ -128,7 +132,6 @@ const Form = () => {
           email: '',
           message: '',
         });
-        console.log(response);
       })
       .catch(() => {
         setSubmission({ ...submission, success: false, fail: true });

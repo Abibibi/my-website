@@ -23,7 +23,7 @@ const Form = () => {
 
   const submissionMessage = useRef(null);
 
-  const inputValidation = (field) => {
+  const inputValidation = (field, blur) => {
     let regexValue = '';
 
     switch (field) {
@@ -44,7 +44,10 @@ const Form = () => {
 
     if (values[field]) {
       if (!values[field].match(regexValue)) {
-        setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
+        if (blur) {
+          // this is only executed on blur, not on change
+          setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
+        }
       }
       // if value entered match requirements,
       // error message is not displayed anymore
@@ -62,6 +65,8 @@ const Form = () => {
   const handleChange = (event) => {
     event.persist();
     setValues(({ ...values, [event.target.name]: event.target.value }));
+
+    inputValidation(event.target.name);
   };
 
   const encode = (data) => (
@@ -152,7 +157,7 @@ const Form = () => {
               value={values.name}
               onChange={handleChange}
               onBlur={() => {
-                inputValidation('name');
+                inputValidation('name', 'blur');
               }}
             />
           </label>
@@ -167,7 +172,7 @@ const Form = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={() => {
-                inputValidation('email');
+                inputValidation('email', 'blur');
               }}
             />
           </label>
@@ -182,7 +187,7 @@ const Form = () => {
               value={values.message}
               onChange={handleChange}
               onBlur={() => {
-                inputValidation('message');
+                inputValidation('message', 'blur');
               }}
             />
           </label>

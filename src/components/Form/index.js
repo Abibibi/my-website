@@ -27,6 +27,8 @@ const Form = () => {
     let regexValue = '';
 
     switch (field) {
+      // making sure that name includes at least 2 characters
+      // and does not include numbers
       case 'name':
         regexValue = /^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
         break;

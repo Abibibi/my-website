@@ -86,9 +86,14 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (errors.name || errors.email || errors.message) {
-      return;
-    }
+    // if user submits form again,
+    // previous submission and error messages
+    // should not be displayed anymore initially
+    setSubmission({
+      ...submission,
+      success: false,
+      fail: false,
+    });
 
     if (!values.name) {
       setErrors((prevErrors) => ({ ...prevErrors, name: true }));
@@ -106,21 +111,9 @@ const Form = () => {
       return;
     }
 
-    // if user submits form again,
-    // previous submission and error messages
-    // should not be displayed anymore initially
-    setSubmission({
-      ...submission,
-      success: false,
-      fail: false,
-    });
-
-    setErrors({
-      ...errors,
-      name: false,
-      email: false,
-      message: false,
-    });
+    if (errors.name || errors.email || errors.message) {
+      return;
+    }
 
     fetch('/', {
       method: 'POST',

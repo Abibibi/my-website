@@ -108,10 +108,10 @@ const Form = () => {
     }
 
     if (!values.name || !values.email || !values.message) {
-      window.scrollTo({
+     /*  window.scrollTo({
         top: document.querySelector('.form').offsetTop,
         behavior: 'smooth',
-      });
+      }); */
       return;
     }
 

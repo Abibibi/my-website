@@ -1,5 +1,5 @@
 // == Import : npm
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // == Import : local
 import './app.scss';
@@ -10,15 +10,26 @@ import Form from 'src/components/Form';
 import Footer from 'src/components/Footer';
 
 // == Composant
-const App = () => (
-  <div id="app">
-    <Navbar />
-    <Header />
-    <Projects />
-    <Form />
-    <Footer />
-  </div>
-);
+const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      const viewheight = window.innerHeight;
+      const viewwidth = window.innerWidth;
+      const viewport = document.querySelector('meta[name=viewport]');
+      viewport.setAttribute('content', `height="${viewheight}px, width=${viewwidth}px, initial-scale=1.0"`);
+    }, 300);
+  }, []);
+
+  return (
+    <div id="app">
+      <Navbar />
+      <Header />
+      <Projects />
+      <Form />
+      <Footer />
+    </div>
+  );
+};
 
 // == Export
 export default App;

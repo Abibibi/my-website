@@ -7,7 +7,7 @@
     text-transform: uppercase;
     color: #ffffff;/*  */
     text-align: center;
-    font-size: 1.9em;
+    font-size: 5vh;
     height: 36vh;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
 
   &-slider {
     position: relative;
-    margin: 0 auto 2rem;
+    margin: 0 auto 5vh;
     outline: none;
     display: flex;
     align-items: center;
@@ -96,16 +96,16 @@
 
     &-title {
       color: #ffffff;
-      font-size: 1.4em;
-      line-height: 1.2em;
-      letter-spacing: 0.08em;
+      font-size: 3.8vh;
+      line-height: 5vh;
+      letter-spacing: 0.35vh;
     }
   
     &-description {
       color: #a9a8a8;
-      line-height: 1.8em;
-      margin: 1.4rem 0 1.8rem;
-      font-size: .95em;
+      line-height: 4.3vh;
+      margin: 3.5vh 0 4.5vh;
+      font-size: 2.6vh;
     }
   
     &-links {
@@ -116,13 +116,13 @@
         color: #000000;
         font-weight: 600;
         text-transform: uppercase;
-        padding: 1rem .5rem 1rem 1rem;
+        padding: 2vh 1vh 2vh 2vh;
         background-color: #ffffff;
-        letter-spacing: .6em;
-        font-size: .8em;
+        letter-spacing: 1vh;
+        font-size: 2.1vh;
         word-wrap: normal;
         display: inline-block;
-        margin: 0 .4rem;
+        margin: 0 2.5vw;
         border: 1px solid #ffffff;
   
         &:hover {
@@ -132,7 +132,7 @@
   
         &:active {
           position: relative;
-          top: .1rem;
+          top: .3vh;
         }
       } 
     }
@@ -148,8 +148,10 @@
 
   .project {
     flex-direction: column;
+    /* height: 100vh; */
     
     &-slider {
+      /* height: 45%; */
       width: 100%;
 
       &-content {
@@ -166,6 +168,7 @@
     }
 
     &-details {
+      /* height: 55%; */
 
       &-title {
         text-align: center;
@@ -263,9 +266,11 @@
   .project {
     flex-direction: row;
     width: 100%;
-    align-items: flex-start;
+    /* height: 85vh; */
+    align-items: center;
 
     &-slider {
+      /* height: 100%; */
       width: 50%;
 
       &-content {
@@ -282,14 +287,13 @@
     }
 
     &-details {
+      /* height: 100%; */
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: left;
       padding: 0 3rem;
-      margin-top: 5%;
-      /* margin-top: 3.5rem; */
 
       &-title {
         text-align: left;
@@ -299,27 +303,9 @@
         justify-content: left;
 
         &-link {
-          margin: 0 1rem 0 0;
+          margin: 0 2.5vw 0 0;
         }
       }
     }
   }
 }
-
-/* @media (min-width: 1400px) {
-  .project {
-
-    &-details {
-      margin-top: 6rem;
-    }
-  }
-}
-
-@media (min-width: 2500px) {
-  .project {
-
-    &-details {
-      margin-top: 15rem;
-    }
-  }
-} */

@@ -25,16 +25,8 @@ const Form = () => {
     let regexValue = '';
 
     switch (field) {
-      // making sure that name includes at least 2 characters
-      // and does not include numbers
-      case 'name':
-        regexValue = /^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
-        break;
       case 'email':
         regexValue = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        break;
-      case 'message':
-        regexValue = /^(?:(?:^| )\S+ *){6,}$/;
         break;
       default:
         regexValue = '';
@@ -42,7 +34,6 @@ const Form = () => {
 
     if (values[field]) {
       if (!values[field].match(regexValue)) {
-        // this is only executed on blur, not on change
         setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
       }
       // if value entered match requirements,
@@ -51,7 +42,7 @@ const Form = () => {
         setErrors((prevErrors) => ({ ...prevErrors, [field]: false }));
       }
     }
-    // on blur, if no value was entered,
+    // if no value was entered,
     // error message is displayed
     else if (!values[field]) {
       setErrors((prevErrors) => ({ ...prevErrors, [field]: true }));
@@ -74,7 +65,9 @@ const Form = () => {
 
     setValues(({ ...values, [event.target.name]: event.target.value }));
 
-    inputValidation(event.target.name);
+    event.target.addEventListener('blur', () => {
+      inputValidation(event.target.name);
+    });
   };
 
   const encode = (data) => (
@@ -95,27 +88,21 @@ const Form = () => {
       fail: false,
     });
 
-    if (!values.name) {
-      setErrors((prevErrors) => ({ ...prevErrors, name: true }));
-    }
-
-    if (!values.email) {
-      setErrors((prevErrors) => ({ ...prevErrors, email: true }));
-    }
-
-    if (!values.message) {
-      setErrors((prevErrors) => ({ ...prevErrors, message: true }));
-    }
+    Object.keys(values).forEach((key) => {
+      inputValidation(key);
+    });
 
     if (!values.name || !values.email || !values.message) {
-     /*  window.scrollTo({
+      window.scrollTo({
         top: document.querySelector('.form').offsetTop,
         behavior: 'smooth',
-      }); */
+      });
+      console.log('stops at values');
       return;
     }
 
     if (errors.name || errors.email || errors.message) {
+      console.log('stops at errors');
       return;
     }
 
@@ -159,13 +146,9 @@ const Form = () => {
               name="name"
               value={values.name}
               onChange={handleChange}
-              onBlur={() => {
-                inputValidation('name');
-                console.log(errors);
-              }}
             />
           </label>
-          {errors.name && <p className="form-content-labelInput-error">Veuillez renseigner un nom valide.</p>}
+          {errors.name && <p className="form-content-labelInput-error">Veuillez renseigner votre nom.</p>}
         </div>
         <div className="form-content-labelInput">
           <label className="form-content-labelInput-label" htmlFor="email">Adresse e-mail
@@ -175,9 +158,6 @@ const Form = () => {
               name="email"
               value={values.email}
               onChange={handleChange}
-              onBlur={() => {
-                inputValidation('email');
-              }}
             />
           </label>
           {errors.email && <p className="form-content-labelInput-error">Veuillez saisir une adresse e-mail valide.</p>}
@@ -190,17 +170,14 @@ const Form = () => {
               name="message"
               value={values.message}
               onChange={handleChange}
-              onBlur={() => {
-                inputValidation('message');
-              }}
             />
           </label>
-          {errors.message && <p className="form-content-labelInput-error">Veuillez saisir un message plus long.</p>}
+          {errors.message && <p className="form-content-labelInput-error">Veuillez saisir un message.</p>}
         </div>
         <button className="form-content-button" type="submit">Envoyer</button>
       </form>
       {submission.success && <div className="form-submission">Merci pour votre message. Je vous répondrai bientôt.</div>}
-      {submission.fail && <div className="form-submission">Votre message n'a pas été envoyé. Veuillez le soumettre à nouveau.</div>}
+      {submission.fail && <div className="form-submission">Votre message n'a pas pu être envoyé. Veuillez le soumettre à nouveau.</div>}
     </div>
   );
 };

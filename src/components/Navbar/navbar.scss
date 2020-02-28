@@ -5,22 +5,21 @@
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
 
   &-website {
 
     &-name {
-      font-size: 2em;
-      letter-spacing: .14em;
-      font-family: 'Raleway', sans-serif;
+      font-size: 5vh;
+      letter-spacing: .3vw;
+      font-family: 'Raleway', ;
       cursor: pointer;
     }
   }
 
   &-nav {
-    width: 9rem;
-    font-size: 1em;
+    width: 11vw;
+    font-size: 1.3vw;
     display: flex;
 
     &-links {
@@ -40,7 +39,11 @@
         
         &-onelink {
           font-weight: 600;
-          font-size: 1em;
+          font-size: 3vh;
+
+          &-logo {
+            width: 60%;
+          }
         }      
       }
     }
@@ -61,13 +64,12 @@
 
 @media screen and (min-width: 300px) and (max-width: 899px) {
   .navbar {
-    padding: 1rem;
+    padding: 2vh;
 
     &-website {
 
       &-name {
-        font-size: 1.5em;
-        width: 21rem;
+        font-size: 3.9vh;
       }
     }
 
@@ -88,7 +90,14 @@
         transition: transform .7s ease-in;
 
         &-link {
-          margin: 2rem 0;
+          margin: 5vh 0;
+
+          &-onelink {
+            
+            &-logo {
+              width: 12vh;
+            }
+          }
         }
 
         &-active {
@@ -117,17 +126,15 @@
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1100px) and (min-height: 1000px) and (max-height: 1370px) {
+@media screen and (min-width: 1020px) and (min-height: 1300px) and (max-height: 1370px) {
   html body .navbar {
-    padding: 2em;
+    padding: 2vh;
 
     &-website {
 
       &-name {
-        letter-spacing: .2em;
-        font-size: 2.8em;
+        letter-spacing: .6vw;
         display: block;
-        width: 23rem;
       }
     }
 
@@ -149,8 +156,14 @@
         transition: transform .7s ease-in;
 
         &-link {
-          margin: 4rem 0 3rem;
-          font-size: 2em;
+          margin-bottom: 5vh;
+
+          &-onelink {
+
+            &-logo {
+              width: 12vh;
+            }
+          }
         }
 
         &-active {
@@ -160,13 +173,6 @@
 
       &-burger {
         display: block;
-
-        &-line {
-          width: 2rem;
-          height: 0.3rem;
-          background-color: #d8d2d2;
-          margin: .4rem;
-        }
       }
     }
   }
@@ -174,24 +180,23 @@
 
 @media screen and (min-width: 900px) and (min-height: 300px) {
   body .navbar {
-    padding: 2rem 3rem;
+    padding: 2vw 3vw;
 
     &-website {
 
       &-name {
-        font-size: 2.1em;
+        font-size: 2.5vw;
       }
     }
 
     &-nav {
-      width: 10rem;
 
       &-links {
 
         &-link {
 
           &-onelink {
-            font-size: 1em;
+            font-size: .9em;
           }
         }
       }

@@ -12,6 +12,12 @@ import Footer from 'src/components/Footer';
 // == Composant
 const App = () => {
   useEffect(() => {
+    // to make sure the height taken into account
+    // is the whole window size,
+    // not the visible window size
+    // (critical on mobile, where, on click on the contact form inputs,
+    // the keyboard appears and takes half of the window size,
+    // which shrinks the form size - unpleasant user experience)
     setTimeout(() => {
       const viewheight = window.innerHeight;
       const viewwidth = window.innerWidth;

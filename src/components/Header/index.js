@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import './header.scss';
 import Loader from 'src/components/Loader';
+// no longer using picture stored in repo,
+// since it takes too long to load when 
+// site is deployed
 /* import picture from 'src/styles/assets/images/abeba/abeba_ngwe.jpg'; */
 
 const Header = () => {

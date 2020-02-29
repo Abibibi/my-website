@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './header.scss';
 import Loader from 'src/components/Loader';
-import picture from 'src/styles/assets/images/abeba/abeba_ngwe.png';
+import picture from 'src/styles/assets/images/abeba/abeba_ngwe.jpg';
 
 const Header = () => {
   const [loading, setLoading] = useState(true);
@@ -13,7 +13,7 @@ const Header = () => {
     document.querySelector('img').addEventListener('load', () => {
       setTimeout(() => {
         loaded();
-      }, 6000);
+      }, 0);
     });
   });
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './header.scss';
 import Loader from 'src/components/Loader';
-import picture from 'src/styles/assets/images/abeba/abeba_ngwe.jpg';
+/* import picture from 'src/styles/assets/images/abeba/abeba_ngwe.jpg'; */
 
 const Header = () => {
   const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ const Header = () => {
       <div className="header-picture">
         <img
           className="header-picture-content fade"
-          src={picture}
+          src="https://www.cjoint.com/doc/20_02/JBDcwuQLDnA_abeba-ngwe.jpg"
           alt="portrait où Abeba Ngwe regarde vers le bas en souriant, donnant l'impression d'observer la section suivante du site qui se trouve justement plus bas."
         />
       </div>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './header.scss';
 import Loader from 'src/components/Loader';
 // no longer using picture stored in repo,
-// since it takes too long to load when 
+// since it takes too long to load when
 // site is deployed
 /* import picture from 'src/styles/assets/images/abeba/abeba_ngwe.jpg'; */
 
@@ -14,9 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     document.querySelector('img').addEventListener('load', () => {
-      setTimeout(() => {
-        loaded();
-      }, 0);
+      loaded();
     });
   });
 
@@ -25,7 +23,6 @@ const Header = () => {
       {loading && <Loader />}
       {!loading && (
       <div className="header-text">
-        <p className="header-text-name fade">Abeba Ngwe</p>
         <p className="header-text-subtitle fade">Mon nom est Abeba Ngwe et je suis <strong className="header-text-subtitle-profession">développeuse Node.js</strong><strong className="header-text-subtitle-profession">, React</strong> et <strong className="header-text-subtitle-profession">Vue.js</strong>. Pour voir mon portfolio, suivez mon regard.</p>
       </div>
       )}

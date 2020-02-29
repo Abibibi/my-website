@@ -25,7 +25,7 @@ const Navbar = () => {
     }
     else if (event.target.textContent === 'Abeba Ngwe') {
       window.scrollTo({
-        top: document.querySelector('.navbar-website-name').offsetTop,
+        top: document.querySelector('.header').offsetTop,
         behavior: 'smooth',
       });
     }

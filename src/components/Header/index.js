@@ -10,7 +10,11 @@ const Header = () => {
   const loaded = () => setLoading(false);
 
   useEffect(() => {
-    document.querySelector('img').addEventListener('load', loaded);
+    document.querySelector('img').addEventListener('load', () => {
+      setTimeout(() => {
+        loaded();
+      }, 6000);
+    });
   });
 
   return (

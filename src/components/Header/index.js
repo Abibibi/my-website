@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './header.scss';
 import Loader from 'src/components/Loader';
 import picture from 'src/styles/assets/images/abeba/abeba_ngwe.png';
 
 const Header = () => {
-  const [loading, setLoaded] = useState(true);
+  const [loading, setLoading] = useState(true);
+
+  const loaded = () => setLoading(false);
+
+  useEffect(() => {
+    document.querySelector('img').addEventListener('load', loaded);
+  });
 
   return (
     <div className="header">
@@ -18,7 +24,11 @@ const Header = () => {
       )}
       {!loading && (
       <div className="header-picture">
-        <img className="header-picture-content fade" src={picture} alt="portrait où Abeba Ngwe regarde vers le bas en souriant, donnant l'impression d'observer la section suivante du site qui se trouve justement plus bas." />
+        <img
+          className="header-picture-content fade"
+          src={picture}
+          alt="portrait où Abeba Ngwe regarde vers le bas en souriant, donnant l'impression d'observer la section suivante du site qui se trouve justement plus bas."
+        />
       </div>
       )}
     </div>

@@ -49,6 +49,7 @@ export default [
       'Vue.js',
     ],
     demo: 'https://www.linkedin.com/posts/abebangwe_nodejs-expressjs-sql-activity-6634099045537198080-5kd5',
+    website: 'https://gratitude.abebangwe.com/',
     github: 'https://github.com/Abibibi/teambuilding-messaging-tool',
     pictures: [
       {
@@ -88,8 +89,8 @@ export default [
       'Sequelize',
       'React',
     ],
-    website: 'http://serialkiller.abebangwe.com/',
     demo: 'https://www.youtube.com/watch?v=36cu4wNc2OA',
+    website: 'https://serialkiller.abebangwe.com/',
     github: 'https://github.com/Abibibi/tv-show-social-network',
     pictures: [
       {
@@ -164,6 +165,7 @@ export default [
       'Vue.js',
     ],
     demo: 'https://www.linkedin.com/posts/abebangwe_javascript-vuejs-nodejs-activity-6627935589566038016-guO2',
+    website: 'https://mesprochainesvacances.abebangwe.com/',
     github: 'https://github.com/Abibibi/next-trip-countdown',
     pictures: [
       {
@@ -191,7 +193,7 @@ export default [
     ],
     description: 'Au clic sur le bouton "Rejouer", une nouvelle prédiction pour 2020 apparaît. Inspiré du filtre Instagram "In 2020 I will be".',
     demo: 'https://www.linkedin.com/posts/abebangwe_javascript-ugcPost-6631169661461377024-jmVz',
-    website: 'http://test.com',
+    website: 'https://predictions.abebangwe.com/',
     github: 'https://github.com/Abibibi/2020-prediction-game',
     pictures: [
       {
@@ -218,7 +220,7 @@ export default [
       'JavaScript Vanilla',
     ],
     description: 'Après avoir sélectionné une catégorie de produit et renseigné un budget maximal, l\'utilisateur-rice voit apparaître une liste de produits correspondant aux critères saisis.',
-    website: 'http://test.com',
+    website: 'https://naturalhaircare.abebangwe.com/',
     github: 'https://github.com/Abibibi/product-finder',
     pictures: [
       {
@@ -245,7 +247,7 @@ export default [
       'JavaScript Vanilla',
     ],
     description: 'Cet outil génère une suite de chiffres pairs ou impairs. Pratique pour imprimer des documents volumineux au format recto-verso.',
-    website: 'http://test.com',
+    website: 'https://assistantimpression.abebangwe.com/',
     github: 'https://github.com/Abibibi/printing-assistant',
     pictures: [
       {

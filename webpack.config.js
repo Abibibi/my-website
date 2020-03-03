@@ -135,6 +135,7 @@ module.exports = {
   plugins: [
     // Permet de prendre le index.html de src comme base pour le fichier de dist/
     new HtmlWebPackPlugin({
+      favicon: './src/styles/assets/images/abeba/favicon.png',
       template: './src/index.html',
       filename: './index.html',
     }),

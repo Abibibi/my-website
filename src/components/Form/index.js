@@ -144,6 +144,7 @@ const Form = () => {
               className="form-content-labelInput-input"
               id="name"
               name="name"
+              title="Veuillez saisir votre nom."
               value={values.name}
               onChange={handleChange}
             />
@@ -156,6 +157,7 @@ const Form = () => {
               className="form-content-labelInput-input"
               id="name"
               name="email"
+              title="Veuillez saisir votre adresse e-mail."
               value={values.email}
               onChange={handleChange}
             />
@@ -168,13 +170,14 @@ const Form = () => {
               className="form-content-labelInput-input form-content-labelInput-textarea"
               id="message"
               name="message"
+              title="Veuillez saisir votre message."
               value={values.message}
               onChange={handleChange}
             />
           </label>
           {errors.message && <p className="form-content-labelInput-error">Veuillez saisir un message.</p>}
         </div>
-        <button className="form-content-button" type="submit">Envoyer</button>
+        <button className="form-content-button" title="Veuillez soumettre le formulaire." type="submit">Envoyer</button>
       </form>
       {submission.success && <div className="form-submission">Merci pour votre message. Je vous répondrai bientôt.</div>}
       {submission.fail && <div className="form-submission">Votre message n'a pas pu être envoyé. Veuillez le soumettre à nouveau.</div>}

@@ -177,7 +177,7 @@ const Form = () => {
           </label>
           {errors.message && <p className="form-content-labelInput-error">Veuillez saisir un message.</p>}
         </div>
-        <button className="form-content-button" title="Veuillez soumettre le formulaire." type="submit">Envoyer</button>
+        <button className="form-content-button" type="submit">Envoyer</button>
       </form>
       {submission.success && <div className="form-submission">Merci pour votre message. Je vous répondrai bientôt.</div>}
       {submission.fail && <div className="form-submission">Votre message n'a pas pu être envoyé. Veuillez le soumettre à nouveau.</div>}

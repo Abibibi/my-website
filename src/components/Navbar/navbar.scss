@@ -5,7 +5,6 @@
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
 
   &-website {
@@ -65,6 +64,7 @@
 @media screen and (min-width: 300px) and (max-width: 899px) {
   .navbar {
     padding: 2vh;
+    align-items: center;
 
     &-website {
 
@@ -115,6 +115,7 @@
 
 @media screen and (min-width: 500px) and (max-width: 850px) and (max-height: 500px) {
   body .navbar {
+    align-items: initial;
 
     &-nav {
 
@@ -129,6 +130,7 @@
 @media screen and (min-width: 1020px) and (min-height: 1300px) and (max-height: 1370px) {
   html body .navbar {
     padding: 2vh;
+    align-items: center;
 
     &-website {
 
@@ -181,6 +183,7 @@
 @media screen and (min-width: 900px) and (min-height: 300px) {
   body .navbar {
     padding: 2vw 3vw;
+    align-items: initial;
 
     &-website {
 

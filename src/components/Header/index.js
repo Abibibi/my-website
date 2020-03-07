@@ -31,7 +31,7 @@ const Header = () => {
         <img
           className="header-picture-content fade"
           src="https://www.cjoint.com/doc/20_02/JBDcwuQLDnA_abeba-ngwe.jpg"
-          alt="portrait où Abeba Ngwe regarde vers le bas en souriant, donnant l'impression d'observer la section suivante du site qui se trouve justement plus bas."
+          alt="Portrait où Abeba Ngwe regarde vers le bas en souriant, donnant l'impression d'observer la section suivante du site qui se trouve justement plus bas."
         />
       </div>
       )}

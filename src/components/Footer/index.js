@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './footer.scss';
-
+import hideMobileMenu from 'src/utils/hideMobileMenu';
 
 const Footer = () => (
-  <footer className="footer">
+  <footer className="footer" onClick={hideMobileMenu}>
     <div className="footer-container">
       <div className="footer-container-links">
         <p>

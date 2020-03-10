@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 
 import './navbar.scss';
+import hideMobileMenu from 'src/utils/hideMobileMenu';
 
 const Navbar = () => {
   const burger = useRef(null);
@@ -29,6 +30,7 @@ const Navbar = () => {
         behavior: 'smooth',
       });
     }
+    hideMobileMenu();
   };
 
   return (

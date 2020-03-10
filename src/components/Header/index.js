@@ -6,6 +6,7 @@ import Loader from 'src/components/Loader';
 // since it takes too long to load when
 // site is deployed
 /* import picture from 'src/styles/assets/images/abeba/abeba_ngwe.jpg'; */
+import hideMobileMenu from 'src/utils/hideMobileMenu';
 
 const Header = () => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,7 @@ const Header = () => {
   });
 
   return (
-    <div className="header">
+    <div className="header" onClick={hideMobileMenu}>
       {loading && <Loader />}
       {!loading && (
       <div className="header-text">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './form.scss';
-
+import hideMobileMenu from 'src/utils/hideMobileMenu';
 
 const Form = () => {
   const [values, setValues] = useState({
@@ -133,7 +133,7 @@ const Form = () => {
   };
 
   return (
-    <div className="form">
+    <div className="form" onClick={hideMobileMenu}>
       <div className="projects-title form-title">
         <h2>Contact</h2>
       </div>

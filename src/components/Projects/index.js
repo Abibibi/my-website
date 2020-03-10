@@ -1,12 +1,13 @@
 import React from 'react';
 
 import './projects.scss';
+import hideMobileMenu from 'src/utils/hideMobileMenu';
 import projects from 'src/data/projects';
 import Project from './Project';
 
 
 const Projects = () => (
-  <div className="projects">
+  <div className="projects" onClick={hideMobileMenu}>
     <div className="projects-title"><h2>Projets</h2></div>
     <div className="projects-all">
       {projects.map(({

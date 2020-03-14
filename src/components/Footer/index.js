@@ -25,15 +25,6 @@ const Footer = () => (
             LinkedIn
           </a>
         </p>
-        <p>
-          <a
-            href="javascript:showAxeptioButton()"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Cliquez-ici pour modifier vos préférences en matière de cookies
-          </a>
-        </p>
       </div>
       <div className="footer-container-copyright">
         <p>Abeba Ngwe - 2020 &#169;</p>

@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <a className="navbar-website-name fade" onClick={handleClick}>Abeba Ngwe</a>
+      <h1><a className="navbar-website-name fade" onClick={handleClick}>Abeba Ngwe</a></h1>
       <nav className="navbar-nav">
         <ul className="navbar-nav-links fade" ref={nav}>
           <li className="navbar-nav-links-link" onClick={handleClick}>

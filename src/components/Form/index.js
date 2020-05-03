@@ -155,7 +155,7 @@ const Form = () => {
           <label className="form-content-labelInput-label" htmlFor="email">Adresse e-mail
             <input
               className="form-content-labelInput-input"
-              id="name"
+              id="email"
               name="email"
               title="Veuillez saisir votre adresse e-mail."
               value={values.email}

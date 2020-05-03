@@ -1,42 +1,42 @@
 // 1st project pictures imports
-import gratitudePicture1 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_1.png';
-import gratitudePicture2 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_2.png';
-import gratitudePicture3 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_3.png';
-import gratitudePicture4 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_4.png';
-import gratitudePicture5 from 'src/styles/assets/images/screenshots/gratitude/device/gratitude_5.png';
+import gratitudePicture1 from 'src/styles/assets/images/screenshots/gratitude/gratitude_1.png';
+import gratitudePicture2 from 'src/styles/assets/images/screenshots/gratitude/gratitude_2.png';
+import gratitudePicture3 from 'src/styles/assets/images/screenshots/gratitude/gratitude_3.png';
+import gratitudePicture4 from 'src/styles/assets/images/screenshots/gratitude/gratitude_4.png';
+import gratitudePicture5 from 'src/styles/assets/images/screenshots/gratitude/gratitude_5.png';
 
 // 2nd project pictures imports
-import serialKillerPicture1 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_1.png';
-import serialKillerPicture2 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_2.png';
-import serialKillerPicture3 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_3.png';
-import serialKillerPicture4 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_4.png';
-import serialKillerPicture5 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_5.png';
-import serialKillerPicture6 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_6.png';
-import serialKillerPicture7 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_7.png';
-import serialKillerPicture8 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_8.png';
-import serialKillerPicture9 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_9.png';
-import serialKillerPicture10 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_10.png';
-import serialKillerPicture11 from 'src/styles/assets/images/screenshots/serialkiller/device/serialkiller_11.png';
+import serialKillerPicture1 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_1.png';
+import serialKillerPicture2 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_2.png';
+import serialKillerPicture3 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_3.png';
+import serialKillerPicture4 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_4.png';
+import serialKillerPicture5 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_5.png';
+import serialKillerPicture6 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_6.png';
+import serialKillerPicture7 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_7.png';
+import serialKillerPicture8 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_8.png';
+import serialKillerPicture9 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_9.png';
+import serialKillerPicture10 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_10.png';
+import serialKillerPicture11 from 'src/styles/assets/images/screenshots/serialkiller/serialkiller_11.png';
 
 // 3rd project pictures imports
-import mesProchainesVacancesPicture1 from 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_1.png';
-import mesProchainesVacancesPicture2 from 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_2.png';
-import mesProchainesVacancesPicture3 from 'src/styles/assets/images/screenshots/mesprochainesvacances/device/mesprochainesvacances_3.png';
+import mesProchainesVacancesPicture1 from 'src/styles/assets/images/screenshots/mesprochainesvacances/mesprochainesvacances_1.png';
+import mesProchainesVacancesPicture2 from 'src/styles/assets/images/screenshots/mesprochainesvacances/mesprochainesvacances_2.png';
+import mesProchainesVacancesPicture3 from 'src/styles/assets/images/screenshots/mesprochainesvacances/mesprochainesvacances_3.png';
 
 // 4th project pictures imports
-import monAnnee2020Picture1 from 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_1.png';
-import monAnnee2020Picture2 from 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_2.png';
-import monAnnee2020Picture3 from 'src/styles/assets/images/screenshots/monannee2020/device/monannee2020_3.png';
+import monAnnee2020Picture1 from 'src/styles/assets/images/screenshots/monannee2020/monannee2020_1.png';
+import monAnnee2020Picture2 from 'src/styles/assets/images/screenshots/monannee2020/monannee2020_2.png';
+import monAnnee2020Picture3 from 'src/styles/assets/images/screenshots/monannee2020/monannee2020_3.png';
 
 // 5th project pictures imports
-import moteurProduit1 from 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_1.png';
-import moteurProduit2 from 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_2.png';
-import moteurProduit3 from 'src/styles/assets/images/screenshots/moteurproduit/device/moteurproduit_3.png';
+import moteurProduit1 from 'src/styles/assets/images/screenshots/moteurproduit/moteurproduit_1.png';
+import moteurProduit2 from 'src/styles/assets/images/screenshots/moteurproduit/moteurproduit_2.png';
+import moteurProduit3 from 'src/styles/assets/images/screenshots/moteurproduit/moteurproduit_3.png';
 
 // 6th project pictures imports
-import assistantImpression1 from 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_1.png';
-import assistantImpression2 from 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_2.png';
-import assistantImpression3 from 'src/styles/assets/images/screenshots/assistantimpression/device/assistantimpression_3.png';
+import assistantImpression1 from 'src/styles/assets/images/screenshots/assistantimpression/assistantimpression_1.png';
+import assistantImpression2 from 'src/styles/assets/images/screenshots/assistantimpression/assistantimpression_2.png';
+import assistantImpression3 from 'src/styles/assets/images/screenshots/assistantimpression/assistantimpression_3.png';
 
 export default [
   {

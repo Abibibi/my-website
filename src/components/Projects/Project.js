@@ -53,7 +53,6 @@ const Project = ({
                 className="project-slider-content-inner-picture"
                 ref={img}
                 key={id}
-                loading="lazy"
               />
             ))}
           </div>

@@ -129,6 +129,13 @@ module.exports = {
     historyApiFallback: true,
     host: host,
     port: port,
+    client: {
+      overlay: true, // Overlay navigateur si erreurs de build
+      progress: true,
+    },
+    devMiddleware: {
+      stats: "minimal", // Infos en console limitées
+    },
   },
   plugins: [
     // Permet de prendre le index.html de src comme base pour le fichier de dist/

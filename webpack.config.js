@@ -1,33 +1,38 @@
 // Node import
-const path = require('path');
+const path = require("path");
 
 // Plugins de traitement pour dist/
 const webpack = require("webpack");
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 require("dotenv").config();
 
 // Config pour le devServer
-const host = 'localhost';
+const host = "localhost";
 const port = 8080;
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== "production";
 
 // Config de Webpack
 module.exports = {
   // Passe le build par dèfaut en déeveloppement
-  mode: 'development',
+  mode: "development",
   // Expose le dossier src/ pour les imports
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'src/'),
+      src: path.resolve(__dirname, "src/"),
     },
   },
   // Points d'entrée pour le travail de Webpack
   entry: {
     app: [
       // Styles
-      './src/styles/index.scss',
+      "./src/styles/index.scss",
       // JS
-      './src/index.js',
+      "./src/index.js",
     ],
   },
   // Sortie
@@ -35,23 +40,24 @@ module.exports = {
     // Nom du bundle
     filename: "[name].js",
     // Nom du bundle vendors si l'option d'optimisation / splitChunks est activée
-    chunkFilename: 'vendors.js',
+    chunkFilename: "vendors.js",
     // Cible des bundles
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   // Optimisation pour le build
   optimization: {
     // Code spliting
     splitChunks: {
-      chunks: 'all',
+      chunks: "all",
     },
-  // Minification TerserPlugin Ligne 52
+    // Minification TerserPlugin Ligne 52
     minimize: true,
-    minimizer: [new TerserPlugin({
-      cache: true,
-      parallel: true,
-      sourceMap: false,
+    minimizer: [
+      new TerserPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: false,
       }),
       new OptimizeCSSAssetsPlugin({}),
     ],
@@ -66,7 +72,7 @@ module.exports = {
         use: [
           // babel avec une option de cache
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
               cacheDirectory: true,
             },
@@ -78,18 +84,18 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           // style-loader ou fichier
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           // Chargement du CSS
-          'css-loader',
+          "css-loader",
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: { plugins: [["autoprefixer"]] },
               sourceMap: true,
             },
           },
           // SASS
-          'sass-loader',
+          "sass-loader",
         ],
       },
       // Images
@@ -97,9 +103,9 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              outputPath: 'assets/',
+              outputPath: "assets/",
             },
           },
         ],
@@ -110,10 +116,10 @@ module.exports = {
         exclude: /medias/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              outputPath: 'fonts/',
-              name: '[name][hash].[ext]',
+              outputPath: "fonts/",
+              name: "[name][hash].[ext]",
             },
           },
         ],
@@ -121,10 +127,6 @@ module.exports = {
     ],
   },
   devServer: {
-    overlay: true, // Overlay navigateur si erreurs de build
-    stats: 'minimal', // Infos en console limitées
-    progress: true, // progression du build en console
-    inline: true, // Rechargement du navigateur en cas de changement
     open: true, // on ouvre le navigateur
     historyApiFallback: true,
     host: host,
@@ -140,14 +142,14 @@ module.exports = {
   plugins: [
     // Permet de prendre le index.html de src comme base pour le fichier de dist/
     new HtmlWebPackPlugin({
-      favicon: './src/styles/assets/images/abeba/favicon.png',
-      template: './src/index.html',
-      filename: './index.html',
+      favicon: "./src/styles/assets/images/abeba/favicon.png",
+      template: "./src/index.html",
+      filename: "./index.html",
     }),
     // Permet d'exporter les styles CSS dans un fichier css de dist/
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: "[name].css",
+      chunkFilename: "[id].css",
     }),
     new webpack.EnvironmentPlugin(["APP_ID", "SEARCH_KEY"]),
   ],

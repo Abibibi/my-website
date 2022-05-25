@@ -2,10 +2,8 @@
 const path = require('path');
 
 // Plugins de traitement pour dist/
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+require("dotenv").config();
 
 // Config pour le devServer
 const host = 'localhost';
@@ -144,5 +142,6 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new webpack.EnvironmentPlugin(["APP_ID", "SEARCH_KEY"]),
   ],
 };

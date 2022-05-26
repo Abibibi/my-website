@@ -1,14 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from "react";
+import { Highlight } from "react-instantsearch-hooks-web";
 
-import './projects.scss';
+import "./projects.scss";
 
 const Project = ({
-  name,
-  description,
-  website,
-  demo,
-  github,
-  pictures,
+  hit: { name, description, website, demo, github, pictures },
 }) => {
   const slider = useRef(null);
   const sliderContent = useRef(null);
@@ -18,7 +14,7 @@ const Project = ({
   let deltaX = 0;
 
   const displayPicture = (event) => {
-    if (event.target.className.includes('left') || event.keyCode === 37) {
+    if (event.target.className.includes("left") || event.keyCode === 37) {
       deltaX -= img.current.width;
 
       deltaX %= pictures.length * img.current.width;
@@ -26,8 +22,10 @@ const Project = ({
       if (deltaX < 0) {
         deltaX = 0;
       }
-    }
-    else if (event.target.className.includes('right') || event.keyCode === 39) {
+    } else if (
+      event.target.className.includes("right") ||
+      event.keyCode === 39
+    ) {
       deltaX += img.current.width;
 
       deltaX %= pictures.length * img.current.width;
@@ -43,27 +41,48 @@ const Project = ({
       right arrow keys are pressed,
       previous or next picture is showed
       respectively */}
-      <div ref={slider} className="project-slider" tabIndex="-1" onKeyDown={displayPicture}>
+      <div
+        ref={slider}
+        className="project-slider"
+        tabIndex="-1"
+        onKeyDown={displayPicture}
+      >
         <div ref={sliderContent} className="project-slider-content">
-          <div ref={sliderContentInner} className="project-slider-content-inner">
-            {pictures && pictures.map(({ id, pictureContent, pictureAlt }) => (
-              <img
-                src={pictureContent}
-                alt={pictureAlt}
-                className="project-slider-content-inner-picture"
-                ref={img}
-                key={id}
-              />
-            ))}
+          <div
+            ref={sliderContentInner}
+            className="project-slider-content-inner"
+          >
+            {pictures &&
+              pictures.map(({ id, pictureContent, pictureAlt }) => (
+                <img
+                  src={pictureContent}
+                  alt={pictureAlt}
+                  className="project-slider-content-inner-picture"
+                  ref={img}
+                  key={id}
+                />
+              ))}
           </div>
         </div>
         <div className="project-slider-arrows" ref={arrows}>
-          <div><i className="project-slider-arrows-arrow project-slider-arrows-left" onClick={displayPicture} /></div>
-          <div><i className="project-slider-arrows-arrow project-slider-arrows-right" onClick={displayPicture} /></div>
+          <div>
+            <i
+              className="project-slider-arrows-arrow project-slider-arrows-left"
+              onClick={displayPicture}
+            />
+          </div>
+          <div>
+            <i
+              className="project-slider-arrows-arrow project-slider-arrows-right"
+              onClick={displayPicture}
+            />
+          </div>
         </div>
       </div>
       <div className="project-details">
-        <h2 className="project-details-title">{name}</h2>
+        <h2 className="project-details-title">
+          <Highlight attribute="name" hit={hit} />
+        </h2>
         <p className="project-details-description">{description}</p>
         {/* using conditional rendering, otherwise
         console says technology is undefined
@@ -71,24 +90,24 @@ const Project = ({
         */}
         <div className="project-details-links">
           {website && (
-          <a
-            className="project-details-links-link"
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Site
-          </a>
+            <a
+              className="project-details-links-link"
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Site
+            </a>
           )}
           {demo && (
-          <a
-            className="project-details-links-link"
-            href={demo}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Démo
-          </a>
+            <a
+              className="project-details-links-link"
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Démo
+            </a>
           )}
           <a
             className="project-details-links-link"
@@ -103,6 +122,5 @@ const Project = ({
     </div>
   );
 };
-
 
 export default Project;

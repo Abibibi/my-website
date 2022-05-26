@@ -14,15 +14,15 @@ const Header = () => {
   const loaded = () => setLoading(false);
 
   useEffect(() => {
-    document.querySelector("img").addEventListener("load", () => {
+    /* document.querySelector("img").addEventListener("load", () => {
       loaded();
-    });
+    }); */
   });
 
   return (
     <div className="header" onClick={hideMobileMenu}>
-      {loading && <Loader />}
-      {!loading && (
+      {/* {loading && <Loader />} */}
+      {
         <div className="header-text">
           <p className="header-text-subtitle fade">
             Mon nom est Abeba Ngwe et je suis{" "}
@@ -32,8 +32,8 @@ const Header = () => {
             . <br></br>Pour voir mon portfolio, suivez mon regard.
           </p>
         </div>
-      )}
-      {!loading && (
+      }
+      {
         <div className="header-picture">
           <img
             className="header-picture-content fade"
@@ -41,7 +41,7 @@ const Header = () => {
             alt="Portrait où Abeba Ngwe regarde vers le bas, où se trouvent les projets."
           />
         </div>
-      )}
+      }
     </div>
   );
 };

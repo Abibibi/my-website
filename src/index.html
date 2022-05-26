@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<script
-		id="Cookiebot"
-		src="https://consent.cookiebot.com/uc.js"
-		data-cbid="ce15b763-93bd-4eae-83fd-9d2fe6d28dd5"
-		type="text/javascript"
-	></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159634974-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+	<head>
+		<script
+			id="Cookiebot"
+			src="https://consent.cookiebot.com/uc.js"
+			data-cbid="ce15b763-93bd-4eae-83fd-9d2fe6d28dd5"
+			type="text/javascript"
+		></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-159634974-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-		gtag('config', 'UA-159634974-1');
-	</script>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Portfolio de Abeba Ngwe, développeuse Node.js, React et Vue.js">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- Open Graph tags -->
-	<meta property="og:title" content="Portfolio - Abeba Ngwe" />
-	<meta property="og:image" content="https://www.cjoint.com/doc/20_03/JCeazGjZSzA_portfolio-abeba-ngwe.png"/>
-	<meta property="og:description" content="Portfolio de Abeba Ngwe, développeuse Node.js, React et Vue.js"/>
-	<meta property="og:url" content="https://abebangwe.com" />
-	<meta property="og:type" content="website" />
-	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
-	<title>Portfolio - Abeba Ngwe</title>
-</head>
-<body>
-	<!-- A little help for the Netlify post-processing bots -->
-	<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-		<input type="text" name="name" />
-		<input type="email" name="email" />
-		<textarea name="message"></textarea>
-	</form>
-	<div id="root"></div>
-</body>
+			gtag("config", "UA-159634974-1");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Portfolio de Abeba Ngwe, développeuse Node.js, React et Vue.js"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- Open Graph tags -->
+		<meta property="og:title" content="Portfolio - Abeba Ngwe" />
+		<meta
+			property="og:image"
+			content="https://ik.imagekit.io/x4pzls7uj/abeba_ngwe_qpkGjbnsXN.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653512879663"
+		/>
+		<meta
+			property="og:description"
+			content="Portfolio de Abeba Ngwe, développeuse Node.js, React et Vue.js"
+		/>
+		<meta property="og:url" content="https://abebangwe.com" />
+		<meta property="og:type" content="website" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Arizonia&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css"
+			integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8="
+			crossorigin="anonymous"
+		/>
+
+		<title>Portfolio - Abeba Ngwe</title>
+	</head>
+	<body>
+		<!-- A little help for the Netlify post-processing bots -->
+		<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+			<input type="text" name="name" />
+			<input type="email" name="email" />
+			<textarea name="message"></textarea>
+		</form>
+		<div id="root"></div>
+	</body>
 </html>

@@ -3,9 +3,7 @@ import { Highlight } from "react-instantsearch-hooks-web";
 
 import "./projects.scss";
 
-const Project = ({
-  hit: { name, description, website, demo, github, pictures },
-}) => {
+const Project = ({ hit }) => {
   const slider = useRef(null);
   const sliderContent = useRef(null);
   const sliderContentInner = useRef(null);
@@ -17,7 +15,7 @@ const Project = ({
     if (event.target.className.includes("left") || event.keyCode === 37) {
       deltaX -= img.current.width;
 
-      deltaX %= pictures.length * img.current.width;
+      deltaX %= hit.pictures.length * img.current.width;
 
       if (deltaX < 0) {
         deltaX = 0;
@@ -28,7 +26,7 @@ const Project = ({
     ) {
       deltaX += img.current.width;
 
-      deltaX %= pictures.length * img.current.width;
+      deltaX %= hit.pictures.length * img.current.width;
     }
 
     sliderContentInner.current.style.marginLeft = `-${deltaX}px`;
@@ -52,8 +50,8 @@ const Project = ({
             ref={sliderContentInner}
             className="project-slider-content-inner"
           >
-            {pictures &&
-              pictures.map(({ id, pictureContent, pictureAlt }) => (
+            {hit.pictures &&
+              hit.pictures.map(({ id, pictureContent, pictureAlt }) => (
                 <img
                   src={pictureContent}
                   alt={pictureAlt}
@@ -83,26 +81,26 @@ const Project = ({
         <h2 className="project-details-title">
           <Highlight attribute="name" hit={hit} />
         </h2>
-        <p className="project-details-description">{description}</p>
+        <p className="project-details-description">{hit.description}</p>
         {/* using conditional rendering, otherwise
         console says technology is undefined
         when I iterate it
         */}
         <div className="project-details-links">
-          {website && (
+          {hit.website && (
             <a
               className="project-details-links-link"
-              href={website}
+              href={hit.website}
               target="_blank"
               rel="noopener noreferrer"
             >
               Site
             </a>
           )}
-          {demo && (
+          {hit.demo && (
             <a
               className="project-details-links-link"
-              href={demo}
+              href={hit.demo}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -111,7 +109,7 @@ const Project = ({
           )}
           <a
             className="project-details-links-link"
-            href={github}
+            href={hit.github}
             target="_blank"
             rel="noopener noreferrer"
           >

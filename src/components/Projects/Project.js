@@ -81,7 +81,9 @@ const Project = ({ hit }) => {
         <h2 className="project-details-title">
           <Highlight attribute="name" hit={hit} />
         </h2>
-        <p className="project-details-description">{hit.description}</p>
+        <p className="project-details-description">
+          <Highlight attribute="description" hit={hit} />
+        </p>
         {/* using conditional rendering, otherwise
         console says technology is undefined
         when I iterate it

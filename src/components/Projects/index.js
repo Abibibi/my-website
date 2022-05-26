@@ -18,7 +18,9 @@ const Projects = () => {
       </div>
       <InstantSearch indexName="my-website" searchClient={searchClient}>
         <SearchBox
-          placeholder="Rechercher un projet par nom, techno ou description (ex : React, messagerie, jeu)"
+          placeholder={
+            'Rechercher un projet par nom, par techno ou par description ("React", "messagerie", "jeu")'
+          }
           className="projects-search"
         />
         <Hits hitComponent={Project} className="projects-all" />

@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Highlight } from "react-instantsearch-hooks-web";
+import classnames from "classnames";
 
 import "./projects.scss";
 
@@ -9,6 +10,8 @@ const Project = ({ hit }) => {
   const sliderContentInner = useRef(null);
   const arrows = useRef(null);
   const img = useRef(null);
+  const technos = useRef(null);
+  const [technoClasses, setTechnoClasses] = useState();
   let deltaX = 0;
 
   const displayPicture = (event) => {
@@ -30,6 +33,21 @@ const Project = ({ hit }) => {
     }
 
     sliderContentInner.current.style.marginLeft = `-${deltaX}px`;
+  };
+
+  const updateTechnoClasses = (hit) => {
+    setTechnoClasses(
+      classnames({
+        "project-details-technology-tag": true,
+        javascript: hit.technology,
+        react: Array.from(technos.current.children[0].children).some((techno) =>
+          techno.textContent.toLowerCase().startsWith("react")
+        ),
+        sequelize: Array.from(technos.current.children[0].children).some(
+          (techno) => techno.textContent.toLowerCase().startsWith("sequelize")
+        ),
+      })
+    );
   };
 
   return (
@@ -88,6 +106,14 @@ const Project = ({ hit }) => {
         console says technology is undefined
         when I iterate it
         */}
+        <div className="project-details-technology" ref={technos}>
+          <Highlight
+            attribute={`technology`}
+            hit={hit}
+            separator="|"
+            className="project-details-technology-tag"
+          />
+        </div>
         <div className="project-details-links">
           {hit.website && (
             <a

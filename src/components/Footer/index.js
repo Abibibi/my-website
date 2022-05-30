@@ -1,12 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import './footer.scss';
-import hideMobileMenu from 'src/utils/hideMobileMenu';
+import "./footer.scss";
+import hideMobileMenu from "src/utils/hideMobileMenu";
 
 const Footer = () => (
   <footer className="footer" onClick={hideMobileMenu}>
     <div className="footer-container">
       <div className="footer-container-links">
+        <p>
+          <a
+            href="https://youtube.com/c/alorsondev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+        </p>
         <p>
           <a
             href="https://github.com/Abibibi"
@@ -27,7 +36,7 @@ const Footer = () => (
         </p>
       </div>
       <div className="footer-container-copyright">
-        <p>Abeba Ngwe - 2020 &#169;</p>
+        <p>Abeba NGWE - 2022 &#169;</p>
       </div>
     </div>
   </footer>

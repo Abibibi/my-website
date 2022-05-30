@@ -24,8 +24,19 @@
     }
 
     input {
-      padding: 1vh;
+      outline: none;
+      border: none;
+      padding: 0.7vw;
+      height: 5vh;
       width: 60%;
+      background-color: #424040;
+      color: #c7c7c7;
+      font-size: 2.5vh;
+      font-family: "Roboto", sans-serif;
+
+      &::placeholder {
+        color: #8e8e8e;
+      }
     }
 
     button {
@@ -122,11 +133,22 @@
     &-description {
       color: #a9a8a8;
       line-height: 4.3vh;
-      margin: 3.5vh 0 4.5vh;
+      margin: 3.5vh 0;
       font-size: 2.6vh;
     }
 
+    &-technology {
+      &-tag {
+        color: #ffffff;
+      }
+
+      &-tag > .ais-Highlight-separator {
+        margin: 0 1vw;
+      }
+    }
+
     &-links {
+      margin-top: 4vh;
       display: flex;
       justify-content: center;
 
@@ -265,6 +287,11 @@
 
       &-title {
         text-align: center;
+      }
+
+      &-technology {
+        display: flex;
+        justify-content: center;
       }
 
       &-links {

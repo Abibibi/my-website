@@ -5,7 +5,7 @@
 
   &-title {
     text-transform: uppercase;
-    color: #ffffff;/*  */
+    color: #ffffff; /*  */
     text-align: center;
     font-size: 5vh;
     height: 36vh;
@@ -14,7 +14,37 @@
     justify-content: center;
   }
 
-  &-all {
+  &-search {
+    margin-bottom: 10vh;
+
+    form {
+      display: flex;
+      justify-content: center;
+      padding: 0 4rem;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      padding: 0.7vw;
+      height: 5vh;
+      width: 60%;
+      background-color: #424040;
+      color: #c7c7c7;
+      font-size: 2.5vh;
+      font-family: "Roboto", sans-serif;
+
+      &::placeholder {
+        color: #8e8e8e;
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  &-all ol {
     display: flex;
     flex-direction: column;
   }
@@ -41,7 +71,7 @@
       &-inner {
         white-space: nowrap;
         transition: margin 1s ease 0s;
-        
+
         &-picture {
           display: inline-block;
           width: 100%;
@@ -71,7 +101,7 @@
 
         &:hover {
           border: solid rgb(127, 206, 252);
-	        border-width: 0 4px 4px 0;
+          border-width: 0 4px 4px 0;
         }
       }
 
@@ -93,25 +123,37 @@
   }
 
   &-details {
-
     &-title {
       color: #ffffff;
       font-size: 3.8vh;
       line-height: 5vh;
       letter-spacing: 0.35vh;
     }
-  
+
     &-description {
       color: #a9a8a8;
       line-height: 4.3vh;
-      margin: 3.5vh 0 4.5vh;
+      margin: 3.5vh 0;
       font-size: 2.6vh;
     }
-  
+
+    &-technology {
+      text-align: center;
+
+      &-tag {
+        color: #ffffff;
+      }
+
+      &-tag > .ais-Highlight-separator {
+        margin: 0 1vw;
+      }
+    }
+
     &-links {
+      margin-top: 4vh;
       display: flex;
       justify-content: center;
-  
+
       &-link {
         color: #000000;
         font-weight: 600;
@@ -124,17 +166,17 @@
         display: inline-block;
         margin: 0 2.5vw;
         border: 1px solid #ffffff;
-  
+
         &:hover {
           background-color: #000000;
           color: #ffffff;
         }
-  
+
         &:active {
           position: relative;
-          top: .3vh;
+          top: 0.3vh;
         }
-      } 
+      }
     }
   }
 }
@@ -149,7 +191,7 @@
   .project {
     flex-direction: column;
     /* height: 100vh; */
-    
+
     &-slider {
       /* height: 45%; */
       width: 100%;
@@ -181,7 +223,7 @@
   .projects {
     &-all {
       padding: 0 1.2rem;
-    } 
+    }
   }
 
   .project {
@@ -189,7 +231,7 @@
 
     &-slider {
       width: 80%;
-      
+
       &-content {
         width: 48%;
 
@@ -226,7 +268,7 @@
     &-slider {
       margin: 0 auto;
       width: 80%;
-      
+
       &-content {
         width: 68%;
 
@@ -247,6 +289,11 @@
 
       &-title {
         text-align: center;
+      }
+
+      &-technology {
+        display: flex;
+        justify-content: center;
       }
 
       &-links {
@@ -295,7 +342,8 @@
       text-align: left;
       padding: 0 3rem;
 
-      &-title {
+      &-title,
+      &-technology {
         text-align: left;
       }
 

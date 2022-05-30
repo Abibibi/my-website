@@ -1,40 +1,33 @@
-import React from 'react';
+import React from "react";
+import algoliasearch from "algoliasearch/lite";
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-hooks-web";
 
-import './projects.scss';
-import hideMobileMenu from 'src/utils/hideMobileMenu';
-import projects from 'src/data/projects';
-import Project from './Project';
+import Project from "./Project";
 
+import hideMobileMenu from "src/utils/hideMobileMenu";
 
-const Projects = () => (
-  <div className="projects" onClick={hideMobileMenu}>
-    <div className="projects-title"><h2>Projets</h2></div>
-    <div className="projects-all">
-      {projects.map(({
-        id,
-        name,
-        description,
-        technology,
-        website,
-        demo,
-        github,
-        pictures,
-      }) => (
-        <Project
-          id={id}
-          name={name}
-          description={description}
-          technology={technology}
-          website={website}
-          demo={demo}
-          github={github}
-          key={id}
-          pictures={pictures}
+import "./projects.scss";
+
+const searchClient = algoliasearch(process.env.APP_ID, process.env.SEARCH_KEY);
+
+const Projects = () => {
+  return (
+    <div className="projects" onClick={hideMobileMenu}>
+      <div className="projects-title">
+        <h2>Projets</h2>
+      </div>
+      <InstantSearch
+        indexName={process.env.PROJECT_INDEX_NAME}
+        searchClient={searchClient}
+      >
+        <SearchBox
+          placeholder={'Rechercher un projet (ex. : "React", "messagerie")'}
+          className="projects-search"
         />
-      ))}
+        <Hits hitComponent={Project} className="projects-all" />
+      </InstantSearch>
     </div>
-  </div>
-);
-
+  );
+};
 
 export default Projects;

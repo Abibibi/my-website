@@ -3,22 +3,19 @@ const path = require("path");
 
 // Plugins de traitement pour dist/
 const webpack = require("webpack");
-const dotenv = require("dotenv");
+
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+require("dotenv").config();
 
 // Config pour le devServer
 const host = "localhost";
 const port = 8080;
 
 const devMode = process.env.NODE_ENV !== "production";
-const env = dotenv.config().parsed;
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  prev[`process.env.${next}`] = JSON.stringify(env[next]);
-  return prev;
-}, {});
 
 // Config de Webpack
 module.exports = {
@@ -155,6 +152,10 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
-    new webpack.DefinePlugin(envKeys),
+    new webpack.EnvironmentPlugin([
+      "APP_ID",
+      "SEARCH_KEY",
+      "PROJECT_INDEX_NAME",
+    ]),
   ],
 };

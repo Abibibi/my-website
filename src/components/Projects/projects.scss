@@ -138,6 +138,8 @@
     }
 
     &-technology {
+      text-align: center;
+
       &-tag {
         color: #ffffff;
       }
@@ -340,7 +342,8 @@
       text-align: left;
       padding: 0 3rem;
 
-      &-title {
+      &-title,
+      &-technology {
         text-align: left;
       }
 

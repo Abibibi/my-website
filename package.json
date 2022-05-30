@@ -12,7 +12,7 @@
     "babel-loader": "*",
     "chai": "*",
     "css-loader": "*",
-    "dotenv": "^16.0.1",
+    "dotenv": "*",
     "enzyme": "*",
     "enzyme-adapter-react-16": "*",
     "eslint": "*",

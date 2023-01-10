@@ -1,18 +1,17 @@
 .navbar {
   position: fixed;
   background-color: #000000;
-  z-index: 1;
+  z-index: 2;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   width: 100%;
 
   &-website {
-
     &-name {
       font-size: 5vh;
-      letter-spacing: .3vw;
-      font-family: 'Raleway', ;
+      letter-spacing: 0.3vw;
+      font-family: "Raleway";
       cursor: pointer;
     }
   }
@@ -34,23 +33,23 @@
         cursor: pointer;
 
         &:hover {
-          color: #7FCEFC;
+          color: #7fcefc;
         }
-        
+
         &-onelink {
           font-size: 2.4vh;
 
           &-logo {
             width: 60%;
           }
-        }      
+        }
       }
     }
 
     &-burger {
       display: none;
       cursor: pointer;
-      
+
       &-line {
         width: 5vh;
         height: 0.5vh;
@@ -67,7 +66,6 @@
     align-items: center;
 
     &-website {
-
       &-name {
         font-size: 3.9vh;
       }
@@ -87,13 +85,12 @@
         justify-content: flex-start;
         width: 50%;
         transform: translateX(100%);
-        transition: transform .5s ease-in;
+        transition: transform 0.5s ease-in;
 
         &-link {
           margin: 9vh 0 1vh;
 
           &-onelink {
-            
             &-logo {
               width: 12vh;
             }
@@ -118,10 +115,9 @@
     align-items: initial;
 
     &-nav {
-
       &-links {
         height: 87vh;
-        top: 13vh
+        top: 13vh;
       }
     }
   }
@@ -133,9 +129,8 @@
     align-items: center;
 
     &-website {
-
       &-name {
-        letter-spacing: .6vw;
+        letter-spacing: 0.6vw;
         display: block;
       }
     }
@@ -155,13 +150,12 @@
         justify-content: flex-start;
         width: 50%;
         transform: translateX(100%);
-        transition: transform .5s ease-in;
+        transition: transform 0.5s ease-in;
 
         &-link {
           margin-bottom: 5vh;
 
           &-onelink {
-
             &-logo {
               width: 12vh;
             }
@@ -186,18 +180,14 @@
     align-items: initial;
 
     &-website {
-
       &-name {
         font-size: 2.5vw;
       }
     }
 
     &-nav {
-
       &-links {
-
         &-link {
-
           &-onelink {
             font-size: 2.4vh;
           }

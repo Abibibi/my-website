@@ -25,18 +25,9 @@ const Footer = () => (
             LinkedIn
           </a>
         </p>
-        <p>
-          <a
-            href="https://github.com/Abibibi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </p>
       </div>
       <div className="footer-container-copyright">
-        <p>Abeba NGWE - 2022 &#169;</p>
+        <p>&#169; 2020 - 2023 Abeba NGWE.</p>
       </div>
     </div>
   </footer>

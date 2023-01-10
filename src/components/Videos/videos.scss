@@ -1,0 +1,35 @@
+.videos {
+  background-color: #1a1a1a;
+  border-top: 1.4px solid gray;
+  border-bottom: 1.4px solid gray;
+
+  &-title {
+    text-transform: uppercase;
+    color: #ffffff; /*  */
+    text-align: center;
+    font-size: 5vh;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  .player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  }
+
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+}

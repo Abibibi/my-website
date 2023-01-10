@@ -12,9 +12,9 @@ const Navbar = () => {
   };
 
   const handleClick = (event) => {
-    if (event.target.textContent === "Projets") {
+    if (event.target.textContent === "Vidéos") {
       window.scrollTo({
-        top: document.querySelector(".projects").offsetTop,
+        top: document.querySelector(".videos").offsetTop,
         behavior: "smooth",
       });
     } else if (event.target.textContent === "Contact") {
@@ -41,7 +41,7 @@ const Navbar = () => {
       <nav className="navbar-nav">
         <ul className="navbar-nav-links fade" ref={nav}>
           <li className="navbar-nav-links-link" onClick={handleClick}>
-            <a className="navbar-nav-links-link-onelink">Projets</a>
+            <a className="navbar-nav-links-link-onelink">Vidéos</a>
           </li>
           <li className="navbar-nav-links-link" onClick={handleClick}>
             <a className="navbar-nav-links-link-onelink">Contact</a>

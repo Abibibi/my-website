@@ -29,7 +29,7 @@ const Header = () => {
             <strong className="header-text-subtitle-profession">
               développeuse front-end
             </strong>
-            . <br></br>Pour voir mon portfolio, suivez mon regard.
+            . <br></br>Pour voir mes tutoriels, suivez mon regard.
           </p>
         </div>
       }
@@ -38,7 +38,7 @@ const Header = () => {
           <img
             className="header-picture-content fade"
             src="https://ik.imagekit.io/x4pzls7uj/abeba_ngwe_qpkGjbnsXN.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653512879663"
-            alt="Portrait où Abeba NGWE regarde vers le bas, où se trouvent les projets."
+            alt="Portrait où Abeba NGWE regarde vers le bas, où se trouvent les vidéos."
           />
         </div>
       }

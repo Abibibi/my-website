@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import './form.scss';
-import hideMobileMenu from 'src/utils/hideMobileMenu';
+import "./form.scss";
+import hideMobileMenu from "src/utils/hideMobileMenu";
 
 const Form = () => {
   const [values, setValues] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [submission, setSubmission] = useState({
@@ -22,14 +22,15 @@ const Form = () => {
   });
 
   const inputValidation = (field) => {
-    let regexValue = '';
+    let regexValue = "";
 
     switch (field) {
-      case 'email':
-        regexValue = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      case "email":
+        regexValue =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         break;
       default:
-        regexValue = '';
+        regexValue = "";
     }
 
     if (values[field]) {
@@ -63,18 +64,19 @@ const Form = () => {
       fail: false,
     });
 
-    setValues(({ ...values, [event.target.name]: event.target.value }));
+    setValues({ ...values, [event.target.name]: event.target.value });
 
-    event.target.addEventListener('blur', () => {
+    event.target.addEventListener("blur", () => {
       inputValidation(event.target.name);
     });
   };
 
-  const encode = (data) => (
+  const encode = (data) =>
     Object.keys(data)
-      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&')
-  );
+      .map(
+        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      )
+      .join("&");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -94,30 +96,30 @@ const Form = () => {
 
     if (!values.name || !values.email || !values.message) {
       window.scrollTo({
-        top: document.querySelector('.form').offsetTop,
-        behavior: 'smooth',
+        top: document.querySelector(".form").offsetTop,
+        behavior: "smooth",
       });
-      console.log('stops at values');
+      console.log("stops at values");
       return;
     }
 
     if (errors.name || errors.email || errors.message) {
-      console.log('stops at errors');
+      console.log("stops at errors");
       return;
     }
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...values }),
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...values }),
     })
       .then(() => {
         setSubmission({ ...submission, success: true, fail: false });
         setValues({
           ...values,
-          name: '',
-          email: '',
-          message: '',
+          name: "",
+          email: "",
+          message: "",
         });
       })
       .catch(() => {
@@ -126,20 +128,21 @@ const Form = () => {
       .finally(() => {
         // to make sure submission result is visible
         window.scrollTo({
-          top: document.querySelector('footer').offsetTop,
-          behavior: 'smooth',
+          top: document.querySelector("footer").offsetTop,
+          behavior: "smooth",
         });
       });
   };
 
   return (
     <div className="form" onClick={hideMobileMenu}>
-      <div className="projects-title form-title">
+      <div className="videos-title form-title">
         <h2>Contact</h2>
       </div>
       <form className="form-content" onSubmit={handleSubmit}>
         <div className="form-content-labelInput">
-          <label className="form-content-labelInput-label" htmlFor="name">Nom
+          <label className="form-content-labelInput-label" htmlFor="name">
+            Nom
             <input
               className="form-content-labelInput-input"
               id="name"
@@ -149,10 +152,15 @@ const Form = () => {
               onChange={handleChange}
             />
           </label>
-          {errors.name && <p className="form-content-labelInput-error">Veuillez renseigner votre nom.</p>}
+          {errors.name && (
+            <p className="form-content-labelInput-error">
+              Veuillez renseigner votre nom.
+            </p>
+          )}
         </div>
         <div className="form-content-labelInput">
-          <label className="form-content-labelInput-label" htmlFor="email">Adresse e-mail
+          <label className="form-content-labelInput-label" htmlFor="email">
+            Adresse e-mail
             <input
               className="form-content-labelInput-input"
               id="email"
@@ -162,10 +170,15 @@ const Form = () => {
               onChange={handleChange}
             />
           </label>
-          {errors.email && <p className="form-content-labelInput-error">Veuillez saisir une adresse e-mail valide.</p>}
+          {errors.email && (
+            <p className="form-content-labelInput-error">
+              Veuillez saisir une adresse e-mail valide.
+            </p>
+          )}
         </div>
         <div className="form-content-labelInput">
-          <label className="form-content-labelInput-label" htmlFor="message">Message
+          <label className="form-content-labelInput-label" htmlFor="message">
+            Message
             <textarea
               className="form-content-labelInput-input form-content-labelInput-textarea"
               id="message"
@@ -175,12 +188,26 @@ const Form = () => {
               onChange={handleChange}
             />
           </label>
-          {errors.message && <p className="form-content-labelInput-error">Veuillez saisir un message.</p>}
+          {errors.message && (
+            <p className="form-content-labelInput-error">
+              Veuillez saisir un message.
+            </p>
+          )}
         </div>
-        <button className="form-content-button" type="submit">Envoyer</button>
+        <button className="form-content-button" type="submit">
+          Envoyer
+        </button>
       </form>
-      {submission.success && <div className="form-submission">Merci pour votre message. Je vous répondrai bientôt.</div>}
-      {submission.fail && <div className="form-submission">Votre message n'a pas pu être envoyé. Veuillez le soumettre à nouveau.</div>}
+      {submission.success && (
+        <div className="form-submission">
+          Merci pour votre message. Je vous répondrai bientôt.
+        </div>
+      )}
+      {submission.fail && (
+        <div className="form-submission">
+          Votre message n'a pas pu être envoyé. Veuillez le soumettre à nouveau.
+        </div>
+      )}
     </div>
   );
 };

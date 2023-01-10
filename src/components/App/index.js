@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import "./app.scss";
 import Navbar from "src/components/Navbar";
 import Header from "src/components/Header";
-import Projects from "src/components/Projects";
+import Videos from "../Videos";
 import Form from "src/components/Form";
 import Footer from "src/components/Footer";
 
@@ -33,7 +33,7 @@ const App = () => {
     <div id="app">
       <Navbar />
       <Header />
-      <Projects />
+      <Videos />
       <Form />
       <Footer />
     </div>
